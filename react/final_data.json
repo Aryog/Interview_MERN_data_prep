@@ -1,0 +1,765 @@
+[
+  {
+    "question": " What is React JS?",
+    "answer": "React JS is a free and open-source front-end JavaScript library for building user interfaces based on components in web applications. React JS is developed and maintained by Facebook (Meta) and a community of individual developers and companies. React JS enables developers to create reusable UI components. React JS makes it simpler to manage the state and data flow in large applications. React is used to develop single-page, mobile, or server-rendered applications with frameworks like Next JS. React is only concerned with the user interface and rendering components to the DOM, React applications rely on libraries for routing and other client-side functionality. Understanding its core concepts such as components, JSX, and the virtual DOM is crucial if you're diving into React JS technical interviews.",
+    "difficulty": "Medium",
+    "followup_question": "What are some key features of reactjs that make it a popular choice for building user interfaces?",
+    "category": "Frontend"
+  },
+  {
+    "question": " What are the components in React?",
+    "answer": "Components in React are reusable, self-contained building blocks that dictate how UI should appear and behave. Components in React enable developers to split the user interface into independent, manageable sections. Each component has its own state and props, allowing it to render dynamically based on data. React applications are typically composed of multiple components, nested and interacting with each other. Use components to create and maintain scalable, efficient, and readable React applications.",
+    "difficulty": "Medium",
+    "followup_question": "What is the role of each component in a typical react application, such as jsx, components, props, state, and lifecycle methods?",
+    "category": "Components"
+  },
+  {
+    "question": " How can you explain JSX?",
+    "answer": "JSX (JavaScript XML) is a syntax extension for JavaScript. JSX is a JavaScript extension that allows the creation of DOM trees using an XML-like syntax. JSX allows developers to write HTML-like structures within the JavaScript code to make the creation of React components more intuitive. JSX produces React \u201celements\u201d, and these elements are the building blocks of React applications. The knowledge of JSX is essential, as it plays a pivotal role in React JS development.",
+    "difficulty": "Easy",
+    "followup_question": "What is the main difference between jsx and traditional javascript syntax for declaring react components?",
+    "category": "Frontend"
+  },
+  {
+    "question": " How do you create a component in React?",
+    "answer": "Create a component in React by extending the `React.Component` class or using a function. Components in React are classified as class components and functional components.\n\n\nFollow the below steps to create a component in React.\n\n\nDecide whether you want to create a class component or a functional component.\n\nFor a class component:\n\n- Extend the `React.Component` class.\n\n\n- Implement the `render` method to define the component's UI.\n\n\nFor a functional component:\n\n- Define a JavaScript function.\n\n\n- Ensure the function returns JSX.\n\n\nImport any necessary dependencies at the beginning of your file.\n\nExport the component to use it in other parts of your application.",
+    "difficulty": "Easy",
+    "followup_question": "What is the recommended structure for a react component's javascript file and jsx file to ensure organization and maintainability?",
+    "category": "Js framework"
+  },
+  {
+    "question": " What is the Virtual DOM?",
+    "answer": "The Virtual DOM is a lightweight in-memory representation of the actual DOM elements. Virtual DOM\u2019s primary purpose is to boost the efficiency and performance of updating the UI in web applications. React creates a Virtual DOM to track changes instead of making direct changes to the real DOM. React then compares the current Virtual DOM with the previous one and calculates the best way to make these changes. This process is known as \"reconciliation\". Updates to the real DOM are batched and executed in the most efficient manner, leading to optimized performance and a smoother user experience.",
+    "difficulty": "Easy",
+    "followup_question": "How does the virtual dom improve rendering performance in web browsers, compared to a traditional document object model (dom)?",
+    "category": "Front-end"
+  },
+  {
+    "question": " How does React handle events?",
+    "answer": "React handles events using a synthetic event system. React\u2019s synthetic event system is a cross-browser wrapper around the browser's native event system. This system provides a consistent API across different browsers.\n\n\nEvent handlers in React are named using camelCase, rather than lowercase. For example, `onClick` instead of `onclick`. Event handlers in JSX are passed as functions, not strings. Event handlers in React must call `preventDefault` explicitly to prevent default behavior, unlike traditional DOM event handlers.\n\n\nEvents in React are pooled, meaning that for performance reasons, the event object's properties are nullified after the event callback has been invoked. So accessing event properties in an asynchronous way is null. Retain the event values by calling `event.persist()`.\n\n\nReact handles events using its own synthetic event system.",
+    "difficulty": "Easy",
+    "followup_question": "How is event bubbling implemented in react, and what are its implications on the component hierarchy?",
+    "category": "Js"
+  },
+  {
+    "question": " What are \u2018props\u2019 in React?",
+    "answer": "'props' in React are short for 'properties'. \u2018props \u2018 in React are a mechanism for passing data from parent to child components. Props are read-only, ensuring the child components do not modify the data they receive. This upholds the principle of data flow in one direction, which makes the application more predictable and easier to debug. Use props to pass data and event handlers down the component tree, ensuring consistent functionality and state management.",
+    "difficulty": "Easy",
+    "followup_question": "What is the purpose of using `props` in a react component, and how do they differ from state?",
+    "category": "Js"
+  },
+  {
+    "question": " What is \u2018state\u2019 in React?",
+    "answer": "'State' in React is an object used to represent the parts of the app that change. Each component maintains its own state. The state object is where you store property values that belong to the component. Changes in state trigger a re-render of the component. The state in React is mutable, but it is never modified directly. Use the `setState` method or the `useState` hook for functional components. Grasping how the state works and its best practices is vital for building dynamic and interactive React applications. The state object is where you store property values that belong to the component.",
+    "difficulty": "Medium",
+    "followup_question": "What are some common use cases for the state in a react application?",
+    "category": "Js"
+  },
+  {
+    "question": " What are the lifecycle methods of a React component?",
+    "answer": "React components have a lifecycle that consists of 3 phases. Each phase has a set of lifecycle methods that are called at specific points in the component\u2019s lifecycle. These methods allow you to control the component\u2019s behavior and perform specific actions at different stages of its lifecycle. A component\u2019s lifecycle has three main phases, the Mounting Phase, Updating Phase, and the Unmounting Phase.\n\nMounting Phase: \n\n\nThe mounting phase is triggered when a component is initiated and added to the DOM. The methods involved in the Mounting phase are listed below.\n\n\n`constructor()`: Sets up the state and binds the methods.\n\n`render()`: Produces the virtual DOM from current props and state.\n\n`componentDidMount()`: Handles tasks after mounting, like fetching data.\n\n\nUpdating Phase: \n\n\nThe updating phase is triggered by changes in props or state. The methods involved in the updating phase are listed below.\n\n\n`getDerivedStateFromProps()`: Updates state based on props before render.\n\n`shouldComponentUpdate()`: Determines if re-rendering is needed.\n\n`render()`: Regenerates the virtual DOM with updated data.\n\n`getSnapshotBeforeUpdate()`: Captures info before the DOM update.\n\n`componentDidUpdate()`: Handles tasks post-update.\n\n\nUnmounting Phase: \n\n\nThe unmounting phase is triggered when a component is about to be removed from the DOM. The methods involved in the unmounting phase are listed below.\n\n\n`componentWillUnmount()`: Manages cleanup tasks before removal.",
+    "difficulty": "Medium",
+    "followup_question": "What is the purpose and when to use each of these lifecycle methods in a react component?",
+    "category": "Component lifecycle"
+  },
+  {
+    "question": " What are \u2018keys\u2019 in React and why are they important?",
+    "answer": "'Keys' in React are unique identifiers assigned to elements in a list or array. \u2018Keys\u2019 assist React in determining which items are changed, been added, or removed. Efficient and precise updates are made to the virtual DOM by providing a stable identity to each element. It's crucial to use keys correctly, as misusing them leads to performance issues and unpredictable behaviors in the React applications.",
+    "difficulty": "Easy",
+    "followup_question": "What is a common use case for using keys in react, and how do they help improve the performance of your application?",
+    "category": "Js"
+  },
+  {
+    "question": " What is \u2018ref\u2019 in React?",
+    "answer": "'ref' in React is a special attribute used to allow direct access to DOM elements or React elements. React developers use the \u2018ref\u2019 attribute to interact with the underlying DOM representation of a component when they need to focus on input or measure its on-screen dimensions. Use 'ref' sparingly, as manipulating the DOM directly sidesteps the virtual DOM and leads to unexpected behaviors.",
+    "difficulty": "Easy",
+    "followup_question": "What is the purpose of using `ref` in react, and when would you use it instead of using the `usestate` hook?",
+    "category": "Js"
+  },
+  {
+    "question": " How is React different from Angular?",
+    "answer": "React is different from Angular in its design and architecture. React is a library focused on building user interfaces and Angular is a comprehensive framework offering a wide range of tools for application development.\n\n\nHere is a list of major differences between React and Angular.\n\n\nReact uses a virtual DOM to optimize rendering and relies on JSX for templating. But Angular uses real DOM and has its template syntax.\n\nReact follows a component-based approach, but Angular incorporates both components and directives.\n>\n\nState management in React is handled by tools like Redux or Context API, but Angular has services and dependency injection.\n\nReact emphasizes UI construction with a component-based philosophy, but Angular provides a full-fledged framework solution with a broader scope.",
+    "difficulty": "Easy",
+    "followup_question": "What are some key differences in their respective frameworks and libraries that contribute to these distinctions?",
+    "category": "Frontendframeworks"
+  },
+  {
+    "question": " What are Controlled Components?",
+    "answer": "Controlled Components in React are components used to store their state in the React state. Controlled Components\u2019 values are controlled by the React component, rather than the DOM.\n\n\nReact uses the value attribute and an onChange handler for inputs in a form, instead of reading values directly from the DOM. This ensures consistent and predictable data flow. Modify the input's value, if the React state changes.\n\n\nControlled Components are fundamental in React because they promote consistent data flow and ensure that the React component is the single source of truth.",
+    "difficulty": "Medium",
+    "followup_question": "What are some common examples of controlled components in software development, and how do they differ from uncontrolled components?",
+    "category": "Control system"
+  },
+  {
+    "question": " How do you handle form inputs in React?",
+    "answer": "Form inputs in React are handled using controlled components. A controlled component is one where React controls the input's state and value. Developers set the controlled component\u2019s value to the corresponding state and update that state with an `onChange` handler for each input.\n\n\nFor instance, Developers associate an input field's value with a state variable. The state updates accordingly when the user types into that field. React then re-renders the component, reflecting the new value. Developers assign a function to the `onChange` event of the input element to capture the user input. This function sets the state with the latest input value.\n\n\nDevelopers leverage React's state management for real-time responsiveness in forms. They handle changes efficiently, using controlled components and corresponding event handlers.",
+    "difficulty": "Medium",
+    "followup_question": "What library or approach do you use to manage form state and validation in react, such as react hook form or final form?",
+    "category": "Form handling"
+  },
+  {
+    "question": " What is lifting state up in React?",
+    "answer": "Lifting state up in React refers to the practice of moving a shared state to a common ancestor component. This ensures that multiple child components are able to access and modify the same state.\n\n\nLifting the state up in React becomes important as components need to share dynamic data. Data flows become more predictable and manageable by centralizing the state at a higher level in the component hierarchy. Utilize this approach when several components need to sync with the same state value.",
+    "difficulty": "Easy",
+    "followup_question": "What are the common scenarios where we would need to lift a component's state up in react?",
+    "category": "State"
+  },
+  {
+    "question": " How do you implement conditional rendering in React?",
+    "answer": "Implement conditional rendering in React using JavaScript expressions. Use below below-mentioned methods to implement conditional rendering in React using Javascript expressions.\n\n\nUse the ternary operator to render components conditionally.\n\nFor instance, Render ComponentA if the condition is true, and ComponentB if false using `{condition ? <ComponentA /> : <ComponentB />}`.\n\n\nUse Inline conditions with the logical `&&` operator to render components conditionally.\n\nFor instance, Display ComponentA, if the condition is true: `{condition && <ComponentA />}`.",
+    "difficulty": "Medium",
+    "followup_question": "How do you handle state changes and re-renders when implementing conditional rendering in react, specifically when dealing with complex components with multiple conditions?",
+    "category": "Js frameworks"
+  },
+  {
+    "question": " What are React Fragments?",
+    "answer": "React Fragments are a feature in React JS used to allow developers to group multiple JSX elements without adding extra nodes to the DOM. React Fragments are especially useful for returning multiple elements from a component without the need for a wrapping parent div. Use React Fragments when you want to keep your DOM structure minimal and avoid unnecessary wrappers.\n\n\nReact Fragments in a react code are represented using empty angle brackets (<>...</>) or by using the <React.Fragment> element. Employ React Fragments, if you aim to optimize the DOM output of your components.",
+    "difficulty": "Easy",
+    "followup_question": "What is the purpose of using react fragments instead of regular html elements in a react application?",
+    "category": "React components"
+  },
+  {
+    "question": " What is Context API?",
+    "answer": "The Context API is a feature in React JS that allows for state and functionality to be easily accessed across different components without passing props through nested components. Context API is particularly useful for global state management in applications. Developers create a context object to utilize this API, then wrap parts of their app in a context provider and consume the context in nested components using a context consumer or the useContext hook. This facilitates a more efficient data flow, especially in larger applications where prop drilling become cumbersome.",
+    "difficulty": "Medium",
+    "followup_question": "What are some common use cases for context api in a mobile app architecture?",
+    "category": "Mobile"
+  },
+  {
+    "question": " How do you pass a function as a prop in React?",
+    "answer": "Pass a function as a prop in React just like you would pass any other prop by defining the prop on the component and assigning the function to it. React components accept functions as props, allowing parent components to communicate with child components. Simply provide the function reference without invoking it to pass a function.\n\n\nFor instance, if you have a function named \u2018handleClick\u2019, you are able to pass it to a child component like this: \u2018<ChildComponent onClick={handleClick} />\u2019. This approach is integral to React's declarative nature and promotes component reusability.",
+    "difficulty": "Medium",
+    "followup_question": "How would you handle props being re-rendered on state changes or parent component updates?",
+    "category": "Props"
+  },
+  {
+    "question": " What is the significance of keys in React lists?",
+    "answer": "The significance of keys in React lists is to ensure efficient and correct rendering of list items. Keys in React lists provide a stable identity for each item in a list, aiding React in determining which items are added, changed, or removed during rendering. Using unique and consistent keys optimizes performance, as React reuses existing DOM elements if their keys match. Avoid using indices as keys, unless the list is static and items will not change order, as this leads to rendering issues and performance degradation.",
+    "difficulty": "Easy",
+    "followup_question": "Why do keys affect the ordering and uniqueness of elements in a react list, and how can you use them to optimize your component's rendering behavior?",
+    "category": "State management"
+  },
+  {
+    "question": " How do you prevent a component from rendering?",
+    "answer": "Return \u201cnull\u201d from its render method to prevent a component from rendering. No rendering occurs for the component when a component's render method returns null in React. Also, use lifecycle methods available to prevent a component from rendering. Use the `shouldComponentUpdate` lifecycle method in class components or the `React.memo` function for functional components to prevent a component from rendering. The `shouldComponentUpdate` lifecycle method returns a boolean value in class components. Instruct React not to re-render the component by returning `false` as a boolean value. The `React.memo` wraps the component and re-renders it only if its props change for functional components. Use these techniques, if you want to optimize performance and avoid unnecessary renders.",
+    "difficulty": "Medium",
+    "followup_question": "What are some common scenarios where preventing a component from rendering is necessary, and how would you handle each of those scenarios in your react application?",
+    "category": "React hooks"
+  },
+  {
+    "question": " What is the use of \u2018propTypes\u2019 in React?",
+    "answer": "The 'propTypes' in React is used to specify the expected data types of the properties (props) that a component receives. \u2018propTypes\u2019 in React assists developers in catching errors early, by validating the data types of incoming props during development. React generates a warning in the console if a prop provided to a component doesn't match its specified type. This feature enhances code reliability and aids in debugging React applications.",
+    "difficulty": "Medium",
+    "followup_question": "What are the benefits of using type checking and validation provided by `proptypes` to ensure the correctness of props passed to a react component?",
+    "category": "Js"
+  },
+  {
+    "question": " How can you handle AJAX in React?",
+    "answer": "AJAX in React is handled using the \u2018componentDidMount\u2019 lifecycle method and third-party libraries such as Axios or FetchAPI. Developers utilize the \u2018componentDidMount\u2019 lifecycle method to execute AJAX calls after a component is mounted. Libraries such as Axios or the Fetch API are popular choices for making these requests. Do remember to handle state changes appropriately to reflect the data from AJAX responses, especially considering the asynchronous nature of these calls. React itself doesn't prescribe any specific way of handling AJAX, integrating it with state management tools like Redux or Context API centralizes and streamlines data-fetching operations.",
+    "difficulty": "Easy",
+    "followup_question": "How do you optimize the performance of an ajax request in a react application to ensure seamless user experience?",
+    "category": "React hooks"
+  },
+  {
+    "question": " What is Redux?",
+    "answer": "Redux is a predictable state container for JavaScript applications, used with React. Redux helps to manage the state of an app more consistently and centrally. Redux introduces concepts like actions, reducers, and the store. Actions define what type of operation should be performed, reducers specify how the state changes in response, and the store holds the application's state. Developers achieve better state predictability using Redux, if state changes are solely triggered by actions.",
+    "difficulty": "Easy",
+    "followup_question": "What are the key principles and benefits of using redux for state management in a react application?",
+    "category": "Javascript library"
+  },
+  {
+    "question": " What are React Hooks?",
+    "answer": "React Hooks are functions that allow developers to use state and other React features without writing a class. React Hooks, Introduced in React 16.8, offer a more concise way to write components and manage state.\n\n\nHooks bring to functional components capabilities that were once exclusive to class components. This includes side effects, context, refs, and more. Developers simplify their code, making it easier to maintain and read by using hooks. Some common hooks are useState, useEffect, and useContext.\n\n\nIt is important to know Redux hooks cannot be mixed with class components when deciding to use hooks in your projects. Always use React Hooks with the functional components.",
+    "difficulty": "Medium",
+    "followup_question": "What is the difference between usestate and usereducer in react hooks?",
+    "category": "Frontend"
+  },
+  {
+    "question": " What is the \u2018useState\u2019 hook in React?",
+    "answer": "The \u2018useState\u2019 is a hook in React used to allow functional components to maintain the local state. Only class components could manage the state prior to the introduction of hooks. Functional components are now able to hold and manipulate state just as class components do with the advent of the \u2018useState\u2019 hook.\n\n\nThe hook returns a pair: the current state value and a function to update it. Developer writes `const [state, setState] = useState(initialValue)` to utilize the \u2018useState\u2019 Redux hook. State updates via `setState` trigger re-renders of the component. Do keep in mind that updates are asynchronous; always rely on the previous state for calculations, if updates are dependent on it.",
+    "difficulty": "Easy",
+    "followup_question": "What are some common use cases for the `usestate` hook in react, and how does it differ from the `usereducer` hook?",
+    "category": "Hooks"
+  },
+  {
+    "question": " What is the \u2018useEffect\u2019 hook in React?",
+    "answer": "The `useEffect` hook in React is a built-in function used to allow the side effects in functional components. The \u2018useEffect\u2019 is mainly used for managing side operations like data fetching, manual DOM manipulations, and setting up subscriptions. This hook takes two arguments: a function containing the code to run and a dependency array. The code runs after the component renders. The code re-runs if the values in the array change if a dependency array is provided.",
+    "difficulty": "Medium",
+    "followup_question": "What are some common use cases for the 'useeffect' hook, such as handling api calls or updating dom elements, and how do you optimize its performance when dealing with complex data structures?",
+    "category": "Javascript hooks"
+  },
+  {
+    "question": " What is the \u2018useContext\u2019 hook in React?",
+    "answer": "The `useContext` hook in React allows developers to access the context value from the context provider. The `useContext` hook simplifies the process of passing and consuming data throughout component trees without resorting to prop drilling. A developer wrap the component with a corresponding `Context.Provider` to utilize the values. The hook returns the current context value, which is then used directly in the component. The `useContext` hook is an essential tool in React's functionality, offering a more efficient way to handle global state or theme toggling, among other use cases.",
+    "difficulty": "Medium",
+    "followup_question": "What is the main purpose of using the `usecontext` hook in a react component to avoid prop drilling and promote code reuse?",
+    "category": "React hook"
+  },
+  {
+    "question": " What is the \u2018useReducer\u2019 hook in React?",
+    "answer": "The `useReducer` hook in React is a function that allows developers to manage and handle complex state logic in your components. The `useReducer` hook provides an alternative to `useState` especially when you have state logic that is more involved or when you're dealing with related actions. Developers dispatch actions that specify how the state should change by utilizing `useReducer`. The hook returns the current state and a dispatch function.\n\n\nThis concept revolves around the reducer function, which determines changes to the state based on the received action. React developers use this hook for larger state management scenarios, as it simplifies and structures code effectively.",
+    "difficulty": "Medium",
+    "followup_question": "What are some key differences between `usereducer` and `usestate` in react?",
+    "category": "State management"
+  },
+  {
+    "question": " What is the \u2018useRef\u2019 hook in React?",
+    "answer": "The \u2018useRef\u2019 hook in React is a function that returns a mutable ref object. The \u2018useRef\u2019 hook object's `.current` property is initialized with the passed argument and persists throughout the component's lifecycle. Changes to the ref object do not trigger re-renders, unlike the state. Developers commonly use the \u2018useRef\u2019 hook to access and interact with DOM elements. This hook is useful for keeping a mutable reference to values without triggering a component update. For example, Developers use the \u2018useRef\u2019 hook to capture the previous state or props value.",
+    "difficulty": "Easy",
+    "followup_question": "What are some common use cases for using 'useref' instead of 'usestate'?",
+    "category": "Js hook"
+  },
+  {
+    "question": " What is the \u2018useMemo\u2019 hook in React?",
+    "answer": "The \u2018useMemo\u2019 is a hook in React that memoizes the output of a function. The \u2018useMemo\u2019 hook ensures the expensive calculations are not re-executed unless one of its dependencies has changed. Performance optimization in React applications is enhanced by using 'useMemo', especially in cases where render-heavy computations occur.\n\n\nThe \u2018useMemo\u2019 hook is essential to manage re-renders efficiently in the React JS development process. The 'useMemo' hook in React helps in this aspect by returning a memoized value, eliminating the need for unnecessary recalculations. Developers leverage 'useMemo', especially when dealing with complex operations, to maintain optimal app performance.",
+    "difficulty": "Easy",
+    "followup_question": "What are some common use cases for the `usememo` hook in react, and how does it differ from `usecallback`?",
+    "category": "React hook"
+  },
+  {
+    "question": " How do you handle errors in React?",
+    "answer": "Errors in React are handled using Error Boundaries. Error Boundaries are React components used to catch JavaScript errors in their child component tree, log those errors, and display a fallback UI instead of the component tree that crashed. Follow the below procedure to handle errors in React by using Error Boundaries.\n\n\nCreate a new component with the `componentDidCatch` method and/or the `static getDerivedStateFromError` method to define an Error Boundary.\n\nWrap sensitive components within this Error Boundary component. This ensures that the whole application doesn't go down even if a part of the UI crashes.\n\n\n\nAlways use Error Boundaries judiciously in specific places of the app where you think there's a likelihood of runtime errors, to maintain a smooth user experience.",
+    "difficulty": "Medium",
+    "followup_question": "How do you use try-catch blocks and error boundaries to prevent errors from propagating upwards in a react application?",
+    "category": "Error handling"
+  },
+  {
+    "question": " What are Higher Order Components (HOCs)?",
+    "answer": "Higher Order Components (HOCs) are a pattern in React used to reuse component logic. Higher-order components are functions that take a component and return a new component, enhancing or extending its capabilities. HOCs are utilized for a myriad of tasks, including state management and props manipulation. Developers use HOCs to share common functionality across multiple components without duplicating code.",
+    "difficulty": "Easy",
+    "followup_question": "What is an example of a higher-order component in a typical system architecture?",
+    "category": "Software engineering"
+  },
+  {
+    "question": " What are Render Props?",
+    "answer": "Render Props are a technique in React for sharing code between components using a prop whose value is a function. Render Props allows developers to delegate the rendering responsibility to the consuming component. This pattern has the ability to make a component more flexible by allowing it to accept dynamic content or behavior.\n\n\nA render prop in React is in action when a component accepts a function as a prop and uses that function to render some UI. Developers use render props to reuse stateful logic across different components without repeating code. They use Render props to maximize component reusability and flexibility in React applications.",
+    "difficulty": "Easy",
+    "followup_question": "What is the primary purpose of using render props in react applications?",
+    "category": "React"
+  },
+  {
+    "question": " How do you optimize a React application\u2019s performance?",
+    "answer": "Focus on component rendering optimization and state management to optimize a React application's performance.\n\n\nUse the below techniques to optimize a React application\u2019s performance.\n\n\nUtilize the `React.memo()` function to prevent unnecessary renders for functional components. Implement the `shouldComponentUpdate()` lifecycle method.\n\nUse PureComponent for class components to avoid unnecessary re-renders.\n\nOpt for virtualized lists using libraries like `react-window` when rendering large lists.\n\nProfile and identify bottlenecks with React DevTools.\n\nLeverage lazy loading and code splitting with `React.lazy()` and `React.Suspense` to decrease the initial load time.",
+    "difficulty": "Easy",
+    "followup_question": "What are some specific techniques and tools that can be used to optimize a react application's performance, such as code splitting, memoization, or using a bundler like webpack?",
+    "category": "Performance tuning"
+  },
+  {
+    "question": " What is React Router?",
+    "answer": "React Router is a standard library in the React ecosystem for routing in single-page applications. React Router provides the tools to render specific components based on the current URL, simulating the experience of navigating multiple pages. Developers dynamically change the content displayed on a page without triggering a full page refresh. React Router also supports nested routes, route parameters, and programmatic navigation beyond the basic routing.\n\n\nKey components provided by React Router include `<Route>` for defining routes, `<Link>` for creating navigational links, and `<Switch>` for rendering the first child `<Route>` or `<Redirect>` that matches the current location.",
+    "difficulty": "Medium",
+    "followup_question": "What are the key features of react router that make it a popular choice for client-side routing in web applications?",
+    "category": "Frontend"
+  },
+  {
+    "question": " How do you manage the local state in React?",
+    "answer": "Manage the local state using the `useState` hook or the `setState` method in class components. The `useState` hook is used in functional components, allowing for state initialization and updating. The state is initialized in the constructor and updated using the `setState` method in the class components.\n\n\nReact provides the `useReducer` hook for more complex state logic. Utilize the `useReducer` hook to deal with state actions that have predefined conditions.",
+    "difficulty": "Easy",
+    "followup_question": "What techniques do you use to minimize the re-renders of the components when the local state changes, such as shouldcomponentupdate or purecomponent?",
+    "category": "State management"
+  },
+  {
+    "question": " What are Pure Components in React?",
+    "answer": "Pure Components in React are components that implement the `shouldComponentUpdate` lifecycle method by performing a shallow comparison of the component's props and state. The component only re-renders if there are actual changes in the props or state, leading to potential performance improvements.\n\n\nExtend `React.PureComponent` instead of `React.Component` to take advantage of this feature when using the class components. It's essential to be cautious when using Pure Components, as a shallow comparison do not detect changes in nested objects or arrays, leading to unexpected behaviors. Use the `React.memo` higher-order component to achieve a similar effect with functional components in React. This wraps the component and ensures that it only re-renders when its props change, based on a shallow comparison.",
+    "difficulty": "Medium",
+    "followup_question": "How do pure components differ from normal components in terms of their lifecycle and usage in a react application?",
+    "category": "React library"
+  },
+  {
+    "question": " How do you handle side effects in React?",
+    "answer": "Side effects in React are handled using the `useEffect` hook. The `useEffect` hook allows developers to perform side effects, like data fetching, subscriptions, or manual DOM manipulations, in functional components. It replaces the lifecycle methods, such as componentDidMount, componentDidUpdate, and componentWillUnmount, that were used in class components. Specify those values in the dependency array of the hook to run side effects only when certain values change.\n\n\nFor instance, to execute an effect after the component mounts and update it based on the change in the `count` prop, use `useEffect` as shown below.\n\n\nDo not forget to clean up the side effects, especially when they are asynchronous or use resources like subscriptions. Return a function inside `useEffect` to handle this cleanup.",
+    "difficulty": "Easy",
+    "followup_question": "What are some common side effects in react and how would you mitigate them using techniques like error boundaries or try-catch blocks?",
+    "category": "Error handling"
+  },
+  {
+    "question": " What is Prop Drilling and how can you avoid it?",
+    "answer": "Prop Drilling is the process in React JS where props are passed from one component to another through multiple layers of components, even if the intermediate components don\u2019t need the props. Prop Drilling makes the code less readable and harder to manage.\n\n\nReact developers use Context API or state management libraries like Redux to avoid Prop Drilling. Utilizing these tools, components access the data they need directly, without passing props through unnecessary layers. Adopt these practices to enhance code clarity and efficiency.",
+    "difficulty": "Easy",
+    "followup_question": "What are some common scenarios that may lead to prop drilling, and how would you mitigate them in a real-world project?",
+    "category": "Drilling"
+  },
+  {
+    "question": " How do React Hooks avoid bugs that are often introduced by lifecycle methods?",
+    "answer": "React Hooks avoid bugs that are introduced by lifecycle methods by simplifying the way the state and side effects are managed in functional components.\n\n\nLifecycle methods in traditional class components become cluttered and interdependent, leading to hard-to-trace bugs. Hooks provide a cleaner interface for handling side effects and state updates. Developers encapsulate logic in a more modular way by using hooks like `useState` and `useEffect`. This reduces complexity and makes the codebase easier to maintain, diminishing the likelihood of introducing bugs.\n\n\nDevelopers achieve more consistent behavior across their applications by embracing functional components with hooks, given that there's less room for unexpected interactions between lifecycle methods.",
+    "difficulty": "Easy",
+    "followup_question": "How does the use of memoization and dependencies in react hooks help prevent bugs caused by inconsistent or skipped state updates during component re-renders?",
+    "category": "State management"
+  },
+  {
+    "question": " Can you explain the concept of Virtual DOM and its reconciliation algorithm in detail?",
+    "answer": "The concept of Virtual DOM pertains to a lightweight, in-memory representation of the actual DOM in memory. React makes changes to this Virtual DOM instead of directly updating the real DOM. This is significant because direct manipulations of the actual DOM come with a performance cost, especially when frequent updates are involved.\n\n\nThe reconciliation algorithm is React's mechanism to efficiently update the actual DOM by comparing the current Virtual DOM with the updated one. The reconciliation algorithm identifies the minimal set of changes required, and updates the real DOM accordingly, ensuring optimal performance. React pinpoints the exact changes between the old and new Virtual DOMs through a process known as \"diffing\". Changes are batched, so the actual DOM gets updated less frequently, reducing expensive layout recalculations.\n\n\nReact ensures a more efficient and smoother user experience by leveraging the Virtual DOM and reconciliation.",
+    "difficulty": "Medium",
+    "followup_question": "What is the primary motivation behind using a virtual dom over a traditional dom, and how does it impact the overall performance of your application?",
+    "category": "**browser rendering**"
+  },
+  {
+    "question": " How would you optimize a React application that has performance issues due to frequent re-renders?",
+    "answer": "Identify the root cause of these unnecessary renders to optimize a React application that has performance issues due to frequent re-renders by following the below practices.\n\n\nUtilize React's built-in tools such as the React DevTools' Profiler to pinpoint the components that re-render excessively. Observe how frequently and why specific components are updating doing this.\n\nImplement `shouldComponentUpdate` or use `React.memo` for functional components to prevent unnecessary renders by comparing current and next props. Make sure that data structures passed as props are stable.\n\nAvoid inline functions and objects as props, as they trigger unnecessary renders.\n\nConsider using techniques like lazy loading and code splitting to optimize the rendering of components. It's become easier to handle dynamic imports and render components only when they're required with the introduction of React's `Suspense` and `React.lazy`. This reduces the initial load time and renders only the necessary components, providing a more efficient user experience.\n\nBe cautious with third-party libraries. Not all are optimized for performance in React, and some lead to unexpected renders. Always review a library's impact on performance before integrating it into your application.",
+    "difficulty": "Medium",
+    "followup_question": "How would you implement memoization or caching in react components to reduce the number of unnecessary renders and improve overall application performance?",
+    "category": "**react optimization**"
+  },
+  {
+    "question": " Explain the concept of \u2018state\u2019 in Redux and how it differs from the local \u2018state\u2019 in a React component.",
+    "answer": "The concept of 'state' in Redux refers to the single source of truth that represents the entire application's data. The local 'state' in a React component in contrast pertains only to the specific data or information needed by that component.\n\n\nThe \u2018state\u2019 in Redux is centralized and managed in a store, ensuring consistency across the application. Every change to this state is done via actions and reducers, making it predictable and easy to debug. The local 'state' in React is confined to individual components, making them self-contained and able to manage their own data. This distinction means that React's local state handles UI-specific data, but Redux manages global application data.\n\n\nRedux state and React's local state hold data, but their scope and management differ with Redux focusing on application-wide data and React on component-specific data.",
+    "difficulty": "Medium",
+    "followup_question": "What is the primary purpose of using `connect` higher-order component in redux to link your ui components with the redux store, and how does it facilitate managing application state?",
+    "category": "State management"
+  },
+  {
+    "question": " How would you manage side effects in a Redux application?",
+    "answer": "Side effects in a Redux application are managed using middleware such as Redux Thunk, Redux Saga, or Redux Observable. These tools enable developers to handle asynchronous actions and side effects efficiently within the react application. Redux Thunk utilizes thunks to allow functions to dispatch actions, and Redux Saga leverages ES6 generators to manage more complex asynchronous flows. Redux Observable uses RxJS to handle asynchronous operations.\n\n\nRedux Thunk is the go-to choice for smaller applications. Redux Thunk provides a straightforward approach by allowing developers to return a function instead of an action object. This function dispatches multiple actions, handles asynchronous calls, and accesses the current state.\n\n\nRedux Saga or Redux Observable is more appropriate for applications with complex side-effect management needs. Redux Saga's use of generators provides better control over asynchronous flows, allowing developers to handle more intricate scenarios with ease. Redux Observable offers a reactive approach, ideal for managing a wide variety of asynchronous operations, and is especially beneficial if the developer is already familiar with reactive programming concepts using RxJS.\n\n\nUnderstanding side effects is crucial for React developers as they lead to unexpected application behavior if not managed properly. Implement the right middleware, and ensure a consistent and predictable state management system by managing side effects in Redux applications.",
+    "difficulty": "Easy",
+    "followup_question": "What techniques or libraries would you use to handle re-reconciliation of the store state after applying a reducer that updates the store?",
+    "category": "Redux state management"
+  },
+  {
+    "question": " What is a thunk in the context of a Redux middleware? Can you create a simple example of a thunk?",
+    "answer": "A thunk, in the context of Redux middleware, is a function that allows you to delay the dispatch of an action or to dispatch only if a certain condition is met. This mechanism is beneficial for controlling the dispatch of actions, particularly when dealing with asynchronous operations. Thunks are employed in conjunction with the `redux-thunk` middleware.\n\n\nFor instance, consider the need to fetch user data from an API. Use a thunk to manage the async operation instead of dispatching an action directly as shown below.\n\n\nThe thunk `fetchUserData` here dispatches actions based on the outcome of the API call, making it straightforward to handle asynchronous operations in a Redux-based application.",
+    "difficulty": "Medium",
+    "followup_question": "What is the purpose of using thunks in a redux middleware, and how do they allow for more flexible handling of asynchronous actions?",
+    "category": "Middleware"
+  },
+  {
+    "question": " Explain the \u2018select\u2019 function from the reselect library and its usage in optimizing React-Redux applications.",
+    "answer": "The 'select' function from the reselect library is used to efficiently compute derived data from the Redux store. It is common in React-Redux applications to derive data from the store for rendering or other purposes.\n\n\nThe 'select' function allows you to memoize the results instead of recomputing this derived data every time the store changes, ensuring the computations are only redone when necessary.\n\n\nThis optimization is crucial for performance in larger applications. Developers are able to prevent unnecessary re-renders and computations by using \u2018select\u2019, ensuring smoother user experiences. It is particularly beneficial in scenarios where derived data calculations are computationally expensive.",
+    "difficulty": "Medium",
+    "followup_question": "How does the `select` function improve performance by reducing the number of unnecessary renders and computations in a redux application, and provide an example of how to use it effectively?",
+    "category": "Library"
+  },
+  {
+    "question": " How can you implement lazy loading in a React application?",
+    "answer": "Implement lazy loading in a React application using React's built-in `React.lazy()` function and the `<Suspense>` wrapper. \n\n\nHere is a step-by-step approach to implement lazy loading in a React application.\n\n\nImport your component with `React.lazy()` to initiate lazy loading. This allows to rendering of a dynamic import as a regular component.\n\nWrap the lazy-loaded component with the `<Suspense>` wrapper and provide a fallback UI, which will be displayed until the component is loaded. For instance, use a loading spinner as the fallback.\n\n\n\nIt is crucial to incorporate lazy loading, especially if your project involves hefty components or routes.",
+    "difficulty": "Easy",
+    "followup_question": "How would you optimize the performance of your react application by implementing lazy loading for large or complex components that are not immediately visible on page load, and what libraries or tools would you use to achieve this?",
+    "category": "Frontend development"
+  },
+  {
+    "question": " How would you handle prop-type warnings in a large application, and why are they important?",
+    "answer": "Here is a list of practices to handle prop-type warnings.\n\n\nIntegrate tools like ESLint equipped with the `react/prop-types` rule, making it easier to pinpoint prop-type violations during development in large applications.\n\nImplement a consistent code review process to help catch any missed warnings or misused prop types.\n\nSet up a testing environment that mirrors production to surface any warnings not caught during development.\n\n\n\nProp-type warnings are paramount in React development. Prop-type warnings serve as a guardrail, ensuring the components receive data of the expected type. This enhances code reliability and boosts maintainability by providing clearer contracts for component usage. Addressing these warnings early on minimizes the chances of unexpected behaviors or bugs when the application scales or undergoes future modifications.",
+    "difficulty": "Medium",
+    "followup_question": "What specific tools or techniques have you used to effectively identify and address the root causes of these prop-type warnings, rather than just suppressing them, and how do you ensure that the fixes do not introduce new issues elsewhere in the codebase?",
+    "category": "Propagation"
+  },
+  {
+    "question": " How do you manage the rendering of a large list of dynamic components efficiently in React?",
+    "answer": "Managing the rendering of a large list of dynamic components efficiently in React is achieved through virtualization.\n\n\nVirtualization is the concept of rendering only the visible components in the viewport and recycling them as the user scrolls. This technique significantly improves performance and reduces memory usage, especially for sizable lists.\n\n\nUse libraries like `react-window` or `react-virtualized` for effective list virtualization. These libraries provide components that render large lists and grids by displaying a limited number of rows at a time, ensuring smooth scrolling and efficient updates. Implement virtualization in your components, if you're dealing with substantial lists or grids.",
+    "difficulty": "Medium",
+    "followup_question": "What techniques or libraries would you use to optimize the rendering and improve the performance of the component when dealing with a very large dataset?",
+    "category": "React optimization"
+  },
+  {
+    "question": " Explain how to implement Server Side Rendering (SSR) in a React application and its benefits.",
+    "answer": "Utilize frameworks like Next JS to implement Server Side Rendering (SSR) in a React application or manually set up an Express JS server to render React components on the server.\n\n\nThe process to implement Server Side Rendering in a React application involves the below two steps.\n\n\nUsing `ReactDOMServer.renderToString` to convert the React component into an HTML string.\n\nServing this HTML from the server to the client on the initial request.\n\n\n\nThe three primary benefits of SSR in React are listed below.\n\n\nImproved performance: Users see content faster, which enhances the perceived loading speed.\n\nBetter SEO: Search engines crawl and index the server-rendered content more efficiently.\n\nEnhanced user experience: Server Side Rendering reduces the white screen time users see with client-side rendering.",
+    "difficulty": "Easy",
+    "followup_question": "How do you integrate ssr into your existing react application, and what are the common pitfalls to avoid during this process?",
+    "category": "Frontend"
+  },
+  {
+    "question": " Can you create a Higher Order Component (HOC) that handles the visibility of a component?",
+    "answer": "Yes, developers create a Higher Order Component (HOC) that handles the visibility of a component. A HOC in React is a function that takes a component and returns a new component with additional props or behaviors. The HOC in case of managing visibility introduces a prop that determines whether the wrapped component should be rendered or not.\n\n\nUtilize the state and lifecycle methods within the HOC to handle visibility. Do this by conditionally rendering the wrapped component based on a `isVisible` prop or state.\n\n\nFor example, return `null` if `isVisible` is false, otherwise render the wrapped component.",
+    "difficulty": "Easy",
+    "followup_question": "Can you demonstrate how the hoc would handle the visibility change when the parent component is updated or re-rendered, and provide an example implementation in react?",
+    "category": "React hook"
+  },
+  {
+    "question": " Explain how context and refs are used in React. Can you give a scenario where you would use them?",
+    "answer": "Context in React is used to provide a way to pass data through the component tree without having to pass props down manually at every level.\n\n\nFor instance, context proves invaluable when building a theme switcher for an application. Set up a ThemeContext to share theme-related values across multiple components. Components then consume this context, changing their appearance based on the provided theme data.\n\n\nRefs in React are used to provide a way to directly access DOM elements or React components. Refs are created using React.createRef() and attached to React elements via the ref attribute.\n\n\nFor instance, consider an interactive user interface where a user submits a form and you want to immediately focus on a particular input field. Here, refs come into play. Direct access is granted by attaching a ref to the input field, enabling you to programmatically set focus.",
+    "difficulty": "Easy",
+    "followup_question": "What specific problem or requirement would you need to address using `context` and `refs`, and how would you decide which one to use in that scenario?",
+    "category": "Context api"
+  },
+  {
+    "question": " How do you implement error boundaries in React? Give an example of a scenario where it is useful.",
+    "answer": "Error boundaries in React are implemented using a class component that defines `static getDerivedStateFromError` and `componentDidCatch` lifecycle methods. These methods allow a component to capture JavaScript errors anywhere in their child component tree and display a fallback UI instead of the component tree that crashed.\n\n\nA practical scenario where error boundaries are useful is in a dashboard application. An error boundary captures the failure and displays a user-friendly message or a placeholder if a widget or a specific part of the dashboard fails to load due to some error, rather than crashing the entire dashboard. This ensures the users still access other parts of the dashboard without any interruption.",
+    "difficulty": "Medium",
+    "followup_question": "How would you handle error boundaries when working with api calls in react, such as handling server-side errors or unexpected data responses?",
+    "category": "State management"
+  },
+  {
+    "question": " How would you manage state in a form with multiple inputs?",
+    "answer": "Utilize React's useState hook to manage the state in a form with multiple inputs. React's useState hook provides a straightforward way to initialize and update state values for each input. An object is used to group related inputs, where each property corresponds to an individual input field. State synchronization is maintained by setting the `value` of each input field to its corresponding state property and updating it using the `onChange` event.\n\n\nEvent handlers play a crucial role in this process. The handler updates the state with the new value on any input change.\n\n\nFor example, Implement a function as shown below to handle a text input change.\n\n\n`const handleInputChange = (e) => { setState(prevState => ({ ...prevState, [e.target.name]: e.target.value })); }`.",
+    "difficulty": "Medium",
+    "followup_question": "How would you handle concurrent updates to the form's state when multiple users are interacting with it simultaneously?",
+    "category": "State machine"
+  },
+  {
+    "question": " Can you explain how React\u2019s forwardRef function works? Provide a scenario where it would be useful.",
+    "answer": "React\u2019s forwardRef function provides a way to pass a ref through a component to one of its children. React\u2019s forwardRef function is designed to give parent components access to a child's DOM node or instance. Refs in React\u2019s component hierarchy normally don\u2019t get passed through components, but with forwardRef, this behavior is overridden.\n\n\nA common scenario where forwardRef would be useful is with higher-order components (HOCs). Imagine you have an HOC wrapping an input. Use forwardRef to focus on this input from a parent component. This lets the parent component access the input's ref directly, even inside the HOC.",
+    "difficulty": "Medium",
+    "followup_question": "How does react's forwardref function help in resolving circular dependencies between components, and can you provide an example of a situation where using forwardref would prevent a \"maximum update depth exceeded\" error?",
+    "category": "React hooks"
+  },
+  {
+    "question": " How can you implement internationalization (i18n) in a React application?",
+    "answer": "Utilize libraries such as `react-i18next` or `react-intl` to implement internationalization (i18n) in a React application.\n\n\nHere is a list of steps to implement internationalization (i18n) in a React application.\n\n\nInstall the necessary libraries and configure them within the React project.\n\nStore translations for different languages in JSON files or other formats.\n\nFetch the relevant translations based on the user's locale or selected language.\n\nWrap the root component with an internationalization provider, such as the `I18nextProvider` or `IntlProvider` to ensure consistency across the application.",
+    "difficulty": "Easy",
+    "followup_question": "How would you handle different character sets and encoding schemes, such as utf-8 and iso-8859-1, to ensure proper display of non-english text in your i18n implementation?",
+    "category": "Library"
+  },
+  {
+    "question": " Explain the differences between React.PureComponent and React.Component with an example.",
+    "answer": "\u2018React.Component\u2019 is a standard base class for building React components. \u2018React.Component\u2019 re-renders every time there's a change in the parent component or its internal state without specific instructions.\n\n\n\u2018React.PureComponent\u2019 is similar to React.Component but comes with an added advantage. \u2018React.PureComponent\u2019 automatically handles the `shouldComponentUpdate()` method using a shallow prop and state comparison. It only re-renders when there are actual changes in its props or state, potentially optimizing performance.\n\n\nFor example, imagine two components: one built using React.Component and the other with React.PureComponent. Both receive a prop called \"name\". The component will re-render when the parent component of the regular React. Component updates, regardless of whether the \"name\" prop changes. But the component made with React.PureComponent will only re-render if the \"name\" prop is modified. This distinction leads to more efficient rendering behavior in certain applications.",
+    "difficulty": "Medium",
+    "followup_question": "What are the implications of using react.purecomponent over react.component on component state updates?",
+    "category": "Frontend framework"
+  },
+  {
+    "question": " Describe a scenario where you would use useMemo and useCallback Hooks and explain why.",
+    "answer": "Consider a scenario where one would use the `useMemo` and `useCallback` Hooks when optimizing React components for performance, especially in large-scale applications.\n\n\nThe `useMemo` Hook allows developers to memoize the result of an expensive computation, ensuring the computation is not executed on every render, but only when its dependencies change. For instance, `useMemo` is used to store the filtered list, avoiding recalculations unless the input or the data changes when filtering a large list of data based on user input.\n\n\nThe `useCallback` Hook returns a memoized version of the callback function. This ensures the function doesn't get re-created on every render. This is particularly useful when passing callbacks to child components as props. Child components that rely on reference equality to provide re-renders, like those wrapped in `React.memo`, won't render unnecessarily by preventing unnecessary re-creations of the function.",
+    "difficulty": "Medium",
+    "followup_question": "What are some common pitfalls to watch out for when using usememo and usecallback together in a complex react component?",
+    "category": "Functional programming"
+  },
+  {
+    "question": " Can you explain the use of the \u2018useReducer\u2019 Hook for form handling? Provide a simple example.",
+    "answer": "Yes, the `useReducer` Hook in React JS offers a way to manage complex state logic in components. The `useReducer` Hook is particularly useful for form handling, as it allows centralized control over form state and validation logic. The `useReducer` provides more structured and scalable state management when compared to `useState`, especially when dealing with forms that have multiple fields and interactions.\n\n\nConsider a simple form with a single input field to capture a user's name. Using `useReducer`, the state and action handlers in this scenario is as shown below.\n\n\nThe `useReducer` hook in this example manages the form state. Actions are dispatched to update the state, ensuring structured and predictable form handling.",
+    "difficulty": "Medium",
+    "followup_question": "What is the main difference between using `usereducer` and `usestate` when handling complex forms in react applications, and how does it help with managing form state transitions?",
+    "category": "Redux"
+  },
+  {
+    "question": " How do you manage a global state in a React application without using Redux or any other state management library?",
+    "answer": "A global state in a React application is managed without using Redux or any other state management libraries by leveraging the Context API in tandem with hooks.\n\n\nThe Context API provides a mechanism to pass data through the component tree without having to pass props manually at every level. Hooks, especially the `useState` and `useContext` hooks, allow developers to consume and manipulate this context data in functional components.\n\n\nManage global state management in a React application using the Context API in tandem with hooks by following the below approach.\n\n\nCreate a context using `React.createContext()`.\n\nWrap the component tree with the context's provider\n\nPass the global state to its value prop. Components access and modify this state using the `useContext` hook, ensuring seamless data flow in the application.",
+    "difficulty": "Medium",
+    "followup_question": "How would you handle updating multiple connected components when the global state changes, and what strategies would you use to minimize re-renders of unnecessary components?",
+    "category": "React context"
+  },
+  {
+    "question": " Explain the difference between shallow rendering, full rendering, and static rendering while testing React components.",
+    "answer": "The difference between shallow rendering, full rendering, and static rendering while testing React components lies at the core of efficient component testing in the context of React application development.\n\n\nShallow rendering entails rendering a component to a shallow level, excluding its child components. This approach is valuable for isolating and testing individual components in isolation, making it particularly suitable for unit testing. Shallow rendering provides a quick way to verify a component's behavior without delving into its underlying structure.\n\n\nFull rendering involves rendering the entire component tree, including all child components. This comprehensive rendering method is more suitable for integration testing, allowing developers to assess how components interact with one another within the application. Full rendering is relatively slower compared to shallow rendering although it provides a holistic view of a component's behavior.\n\n\nStatic rendering (snapshot testing) captures the output of a rendered component as a static representation, in the form of a snapshot file. This approach is instrumental in ensuring the consistency of UI components over time, guarding against unintentional changes. Static rendering compares the component's output with a saved snapshot, verifying its stability.",
+    "difficulty": "Medium",
+    "followup_question": "What are some common scenarios where you would choose to use each of these rendering approaches in a react application?",
+    "category": "Rendering strategies"
+  },
+  {
+    "question": " How can you handle and prevent security vulnerabilities in a React application?",
+    "answer": "Here are some key steps to handle and prevent security issues in a React application.\n\n\n\nDependency Management: Update the project's dependencies regularly, including React and its related libraries. Use package management tools like npm or yarn to easily track and apply security updates.\n\n\nCode Reviews: Conduct thorough code reviews to identify potential security issues. Encourage team members to follow secure coding practices and adhere to React's guidelines for mitigating common vulnerabilities.\n\n\nCross-Site Scripting (XSS): Prevent XSS attacks by using React's built-in mechanisms, such as JSX escaping. Avoid rendering user-generated content directly into the DOM without proper sanitization.\n\n\nState Management: Be cautious with how you manage and store sensitive data in the React application. Utilize secure storage options, like cookies or the browser's local storage, and avoid exposing sensitive information in the client-side code.\n\n\nAuthentication and Authorization: Implement robust authentication and authorization mechanisms to ensure that only authorized users access sensitive parts of the application. Employ libraries like React Router to manage routing securely.\n\n\nHTTPS: Deploy the React application over HTTPS to encrypt data transmitted between the client and server, reducing the risk of data interception or tampering during transit.\n\n\nContent Security Policy (CSP): Implement CSP headers to restrict the sources from which the application loads scripts, styles, and other resources. This helps prevent unauthorized code execution and mitigates risks associated with third-party integrations.\n\n\nInput Validation: Validate and sanitize user input on both the client and server sides to prevent injection attacks like SQL injection or NoSQL injection.\n\n\nSecurity Headers: Set security headers like X-Content-Type-Options, X-Frame-Options, and X-XSS-Protection to enhance the security of your React application and prevent common web vulnerabilities.",
+    "difficulty": "Medium",
+    "followup_question": "What are some specific measures that can be taken during the development process to identify and mitigate common security vulnerabilities in a react application, such as cross-site scripting (xss) or cross-site request forgery (csrf)?",
+    "category": "Security"
+  },
+  {
+    "question": " Explain the use of \u2018fragments\u2019 in React and give an example where it can be useful.",
+    "answer": "Fragments in React are a way to group multiple child elements without introducing unnecessary parent elements in the DOM. Fragments are useful to return multiple elements from a component, as React components are required to render a single parent element. Fragments allow developers to avoid adding extra divs or other elements solely for the purpose of satisfying this requirement.\n\n\nFor example, consider a React component that needs to render a list of items. Use a fragment to group them together Instead of wrapping the list items in a div or another container element as shown below.\n\n\nThe empty angle brackets `<>` and `</>` in this example represent a fragment. This allows to grouping of the `Item` components without introducing an extra div into the DOM. Using fragments helps keep your DOM structure cleaner and more efficient, especially when dealing with lists or conditional rendering in React components.",
+    "difficulty": "Medium",
+    "followup_question": "What are some common scenarios where using fragments in react can help optimize component rendering and improve performance?",
+    "category": "Js concepts"
+  },
+  {
+    "question": " How do you ensure that component methods have the correct \u2018this\u2019 binding in React?",
+    "answer": "Employ the below techniques to ensure that component methods have the correct 'this' binding in React.\n\n\nUse arrow functions when defining the methods. Arrow functions automatically bind 'this' to the current instance of the component, ensuring that it refers to the component itself.\n\nBind the 'this' context in the constructor using the `bind` method explicitly. This way, developers are able to specify which instance 'this' should refer to within the component methods.\n\nUtilize class properties with arrow functions, which is a more concise way to define methods that automatically maintain the correct 'this' context. This approach simplifies the code and ensures that 'this' points to the component instance without the need for explicit binding.",
+    "difficulty": "Medium",
+    "followup_question": "What are some common pitfalls or edge cases where 'this' binding issues can occur, and how would you go about debugging them in a complex react application?",
+    "category": "React"
+  },
+  {
+    "question": " How would you handle the scenario where a parent and child component both need access to the same state value and modification method?",
+    "answer": "Follow the below steps to address a scenario where both a parent and child component require access to the same state value and modification method in React.\n\n\nLift the shared state value and its modification method up to a common ancestor component. This is referred to as \"lifting state up\" in React. You create a single source of truth for this particular piece of state by following this step.\n\nPass down the state value and modification method as props from the common ancestor component to both the parent and child components that need access to it. This ensures that both components read and modify the state in a synchronized manner.\n\n\n\nIt will directly affect the shared state value since they are both referencing the same data source from the common ancestor component when a modification is made in either the parent or child component. This approach promotes data consistency and ensures that both components have access to the latest state.",
+    "difficulty": "Medium",
+    "followup_question": "How would you synchronize their updates to ensure that the state value remains consistent across multiple components?",
+    "category": "State management"
+  },
+  {
+    "question": " Explain the concept of controlled and uncontrolled components with appropriate examples.",
+    "answer": "Controlled and uncontrolled components are fundamental concepts in React JS development used to manage the state and behavior of your UI components.\n\n\nControlled components maintain and control the component's state. The component's state values are stored in React's state, and any changes to these values are handled through React by using event handlers like onChange for input elements.\n\n\nAn example of a controlled component is an input field where the value is controlled by React is shown below.\n\n\nUncontrolled components are those where React does not manage the state. The state is handled directly by the DOM. Developers use ref to access the DOM element and retrieve its value or other properties in the uncontrolled components.\n\n\nAn example of an uncontrolled component is shown below.",
+    "difficulty": "Medium",
+    "followup_question": "What are some common pitfalls that occur when mixing controlled and uncontrolled components in a system, and how can we mitigate these risks?",
+    "category": "Software engineering"
+  },
+  {
+    "question": " What are the different ways to style a React component? Which one do you prefer and why?",
+    "answer": "Here is a list of different ways to style a React component.\n\n\n\nCSS Stylesheets: CSS stylesheets are used to style a React component. Using CSS Stylesheets is familiar to many developers and separates styling from component logic. CSS Stylesheets lead to global scope issues.\n\n\nInline Styles: Inline styles involve applying styles directly within the component using the `style` attribute. Inline styles provide a scoped approach to styling but result in verbose code.\n\n\nCSS Modules: CSS Modules allow developers to create local-scoped CSS for the components. Using CSS Modules resolves the global scope issue of CSS and provides better maintainability.\n\n\nStyled components: Styled components enable developers to write CSS directly within JavaScript files using tagged template literals. Styled components offer a more dynamic approach to styling and are preferred for their component-specific styling.\n\n\nCSS-in-JS: CSS-in-JS libraries like Emotion or styled-components offer a way to encapsulate styles within components, making it easy to manage styles alongside the component code.\n\n\nTailwind CSS: Tailwind CSS is a utility-first CSS framework that allows developers to apply styles using the class names. Tailwind CSS promotes rapid development but is not suitable for all projects.\n\n\n\nI prefer using Styled components for styling React components because of its component-centric styling approach, dynamic styling capabilities, scoped styling, ease of maintenance, and strong community support.",
+    "difficulty": "Medium",
+    "followup_question": "What are some common use cases for using css-in-js versus external css files in styling a react component, and how does this choice affect the overall performance of the application?",
+    "category": "Component styling"
+  },
+  {
+    "question": " Describe the process of lifting state up in React and provide a practical example.",
+    "answer": "Lifting state up is a technique used to manage and share state between multiple child components by moving the state to their common parent component. Lifting the state up in React helps in maintaining a single source of truth for the shared data, making the application more predictable and easier to maintain.\n\n\nThe process of lifting the state up involves the below work.\n\n\nIdentifying the shared state.\n\nMoving it to a common parent component.\n\nPassing the state down as props to child components.\n\nUpdating the state in the parent component.\n\nRe-rendering the Child components to reflect the updated state.\n\n\n\nHere's a simple explanation of the process with a practical example.\n\n\nImagine you have a parent component called `App` and two child components named `ChildComponentA` and `ChildComponentB`. Both child components need access to a common piece of state, for instance, a counter value.\n\n\nDefine the `counter` state in the `App` component and pass it down to `ChildComponentA` and `ChildComponentB` as props to lift the state up. Any changes to the `counter` are also be managed in the `App` component.\n\n\nBoth `ChildComponentA` and `ChildComponentB` now access and display the `counter` value without directly managing its state. The state is updated and automatically reflected in both child components when the button in the `App` component is clicked.",
+    "difficulty": "Medium",
+    "followup_question": "How do you handle errors and unexpected states when lifting state up in react, and what strategies would you use to debug such issues?",
+    "category": "React hooks"
+  },
+  {
+    "question": " How do you handle asynchronous operations like data fetching in React components? Provide examples of how this can be done using different approaches.",
+    "answer": "Here is a list of different approaches to Handle asynchronous operations like data fetching in React components\n\n\n\nWith the `useState` and `useEffect` hooks:\n\nMaintain a component's state with the `useState` hook. Execute side-effects, like data fetching by combining it with the `useEffect` hook.\n\n\nHere is an example to handle asynchronous operations like data fetching in React components.\n\n\n\n\n\n\n\nWith async/await and React Query:\n\nReact Query is a library designed for fetching, caching, and state management. Simplify asynchronous data fetching by implementing the React query library.\n\n\nHere is an example to handle asynchronous operations like data fetching in React components.\n\n\n\n\n\n\n\nWith the fetch API with componentDidMount (Class Components):\n\n\n\nUtilize the componentDidMount lifecycle method to initiate data fetching in the class component.\n\n\nHere is an example to handle asynchronous operations like data fetching in React components.",
+    "difficulty": "Medium",
+    "followup_question": "How do you handle errors and exceptions that may occur during asynchronous operations, and what are some best practices for handling these errors in a way that is both robust and maintainable?",
+    "category": "Async api"
+  },
+  {
+    "question": " How do you decide when to use Context API vs Redux for state management in large scale applications?",
+    "answer": "Choosing between the Context API and Redux for state management hinges on the specific requirements of the project in large scale applications.\n\n\nContext API is best suited for situations where local state needs to be accessed by nested components without prop drilling. Context API provides a straightforward way to pass and consume state and is built directly into React, ensuring optimal compatibility.\n\n\nRedux offers more advanced features, like middleware support, time-travel debugging, and a more structured approach to handling complex application state. Opt for Redux when you anticipate handling a larger and more complex state, or when integrating with other libraries that have Redux-specific bindings.",
+    "difficulty": "Medium",
+    "followup_question": "What are some key differences between context api and redux that influence your decision-making process, and how do you weigh the pros and cons of each solution based on the specific requirements of your application?",
+    "category": "State management"
+  },
+  {
+    "question": " How would you structure your components in a large-scale React application to maximize maintainability and reusability?",
+    "answer": "Follow the below principles to structure components in a large-scale React application to maximize maintainability and reusability.\n\n\nBreak down components into small, reusable pieces. This ensures each component has a single responsibility. Reusability increases when components are modular.\n\nUse a feature-based structure over a type-based one. Organize components by their features or domains. For example, group all user-related components in a `user` directory. This approach simplifies navigation in large codebases and enhances scalability.\n\nUtilize state management libraries, such as Redux or Recoil, for predictable state flow. Adopt a clear state management pattern, ensuring that components remain pure and free from side-effects.\n\nImplement consistent naming conventions and coding standards throughout the project. This guarantees clarity and coherence.\n\nLeverage tools like Storybook to visualize component hierarchies and dependencies. Integration of automated testing ensures components' reliability in different scenarios.\n\nPrioritize documentation. Provide clear and concise descriptions for each component, detailing their props, state, and behaviors. This fosters collaboration and onboarding, making the codebase more accessible to both new and seasoned developers.",
+    "difficulty": "Medium",
+    "followup_question": "How do you ensure that these reusable components are properly tested, considering the complexity of state management and props passing in a large-scale react application?",
+    "category": "Library architecture"
+  },
+  {
+    "question": " Discuss your approach to optimizing large React applications with significant component re-rendering. How would you diagnose and solve performance bottlenecks?",
+    "answer": "Optimizing large React applications with significant component re-rendering is a key concern for maintaining user satisfaction. Lean on tools like the React DevTools Profiler to effectively diagnose issues. React DevTools Profiler offers a clear visualization of component re-renders and helps in singling out computationally expensive operations. Another valuable resource is the \"why-did-you-render\" library, which provides insights into components that re-render without any cause.\n\n\nAddressing the diagnosed issues involves the below mentioned strategies.\n\n\n\nUtilize `React.memo` and the `useMemo` hook: `React.memo` and the `useMemo` hook help in memoizing components and values respectively, preventing unnecessary renders.\n\n\nRefrain from using inline functions: Inline functions in the render method trigger unneeded re-renders since they create a new function instance with every render.\n\n\nLimit prop drilling: Excessive prop drilling cause components to re-render even when not required. Context API or state management solutions like Redux or MobX alleviate this.\n\n\nImplement virtualization for large lists: Libraries such as `react-window` or `react-virtualized` efficiently render only the visible portions of a list, significantly improving performance for large datasets.\n\n\nCode splitting: Leveraging `React.lazy` and Suspense allows the application to load components only when they are required, reducing the initial bundle size and speeding up load times.\n\n\n\nConsistent profiling and staying updated with React's best practices ensures that applications remain performant, even as they scale.",
+    "difficulty": "Medium",
+    "followup_question": "How do you utilize react's built-in features, such as shouldcomponentupdate() or memoization, to optimize the re-rendering of components in a large-scale application, and what specific metrics do you use to measure the effectiveness of these optimizations?",
+    "category": "Optimization"
+  },
+  {
+    "question": " Can you detail your approach to handling side-effects in React applications? How would you manage it across different components?",
+    "answer": "Yes. Handling side-effects in React applications is primarily achieved through the use of React Hooks, specifically the `useEffect` hook. The `useEffect` hook runs after every render, allowing developers to perform side-effects in functional components. For instance, data fetching, DOM manipulation, and manual subscriptions all are managed with `useEffect`.\n\n\nContext API or state management libraries like Redux or MobX are utilized to manage side-effects across different components. These tools provide centralized stores to manage and share state throughout the application. Components then subscribe to these stores and react to state changes. Do update the centralized store, if side-effects yield new data or changes.\n\n\nSide-effects and their resultant state are efficiently managed across multiple components by combining `useEffect` with global state management.",
+    "difficulty": "Medium",
+    "followup_question": "How do you identify and handle edge cases where side effects can occur, and what techniques would you use to isolate and mitigate the impact of these side effects on other components within your react application?",
+    "category": "Frontend"
+  },
+  {
+    "question": " How do you design and manage the interaction between React and non-React parts of a web application, such as native DOM APIs or other JavaScript libraries?",
+    "answer": "Designing and managing the interaction between React and non-React parts of a web application, such as native DOM APIs or other JavaScript libraries, requires careful consideration and planning.\n\n\nThe practice to design and manage the interaction between React and non-React parts of a web application, such as native DOM APIs or other JavaScript libraries involves below steps.\n\n\nUtilize React's lifecycle methods or hooks like `useEffect` to integrate non-React code. For instance, initiate a jQuery plugin within `useEffect` and ensure its teardown when the component unmounts.\n\nEmploy React's `ref` system when accessing native DOM elements. Direct DOM manipulations should be minimized, but when necessary, always synchronize the state with React.\n\nAvoid direct mutations of React state using external libraries. Update the state in a React way instead, leveraging `setState` or React hooks. This ensures a consistent flow of data and prevents unexpected side effects.",
+    "difficulty": "Medium",
+    "followup_question": "How would you handle potential conflicts or inconsistencies that may arise from using multiple libraries or technologies in the same application, and what strategies would you use to ensure a seamless integration?",
+    "category": "\"integration\""
+  },
+  {
+    "question": " Can you describe the reconciliation process in React and how it affects rendering performance?",
+    "answer": "The reconciliation process in React is the mechanism by which the virtual DOM determines the most efficient way to update the real DOM. React creates a new virtual DOM tree When state or props in a component change. React then compares this new tree with the previous one, using a \"diffing\" algorithm. This comparison helps React pinpoint the exact changes needed in the real DOM, minimizing unnecessary updates.\n\n\nRendering performance benefits greatly from using the reconciliation process in React by only making the necessary changes instead of updating the entire DOM, leading to faster and more efficient updates. This optimization is crucial, especially for large-scale applications, as it ensures smooth user experiences with minimal lag.",
+    "difficulty": "Medium",
+    "followup_question": "What are the common scenarios where reconciliation is most critical to optimize, and how would you approach optimizing the reconciliation process for better rendering performance in such cases?",
+    "category": "Reconciliation"
+  },
+  {
+    "question": " Explain the idea behind Fiber, and how it improves React\u2019s rendering.",
+    "answer": "The idea behind Fiber is to enhance React's rendering mechanism. Fiber is a reimplementation of the core algorithm in React. It focuses on the ability to split rendering work into chunks, allowing React to pause and resume work based on its priority.\n\n\nFiber offers more granular control over the rendering process, improving app responsiveness and user experience. This results in smoother animations and interactions, especially in large applications. It enables features like concurrent mode, which helps in rendering updates more efficiently. Do prioritize certain updates over others, if the need arises.",
+    "difficulty": "Medium",
+    "followup_question": "What is the concept of virtual dom in react's fiber architecture, and how does it optimize rendering by minimizing the number of actual dom mutations?",
+    "category": "Virtual dom"
+  },
+  {
+    "question": " How do you implement and handle Suspense in React?",
+    "answer": "Developers utilize the `<Suspense>` component to implement and handle Suspense in React. The `<Suspense>` component allows React to wait before rendering a component tree until some condition is met, until the necessary data is fetched.\n\n\nWrap a part of the React component tree with the `<Suspense>` tag and provide a fallback prop, to determine what will be rendered while waiting. For example, `<Suspense fallback={<div>Loading...</div>}>`. React components inside the Suspense boundary \"suspend\" their rendering using mechanisms like `React.lazy` for component-level code-splitting.\n\n\nHandle thrown promises within these components, and React automatically display the fallback content until the promise resolves. Do ensure to have proper error boundaries in place, so unexpected issues are gracefully managed.",
+    "difficulty": "Medium",
+    "followup_question": "How would you optimize the suspense api to improve performance and reduce the risk of re-renders when handling large amounts of data or complex components?",
+    "category": "Suspense management"
+  },
+  {
+    "question": " Discuss the intricacies of creating a custom Hook that interacts with an API, handles errors, and manages state.",
+    "answer": "Creating a custom Hook that interacts with an API, handles errors, and manages state requires careful design and consideration. The steps involved in creating a custom Hook that interacts with an API, handles errors, and manages state are listed below.\n\n\nUse the `useState` and `useEffect` Hooks from React to manage the local state and side effects respectively.\n\nInitialize a state for data, another for errors, and another for loading status.\n\nSet the loading status to true when making an API call.\n\nUpdate the respective state and set loading to false once the data returns or an error occurs.\n\nHandle errors by catching them and setting them in the error state.\n\nUse `async/await` within the `useEffect` Hook for efficient error handling and data fetching. Always remember to clean up side effects to prevent memory leaks or unnecessary operations.\n\nFor instance, abort the API call if the component unmounts. This ensures optimal performance and a smooth user experience.",
+    "difficulty": "Medium",
+    "followup_question": "What would be the best approach to handle simultaneous requests from multiple components in the react application while managing the state and error handling for each request?",
+    "category": "React hooks"
+  },
+  {
+    "question": " Can you implement and discuss the Server Side Rendering (SSR) process in a React-Redux application, and how it affects performance and SEO?",
+    "answer": "Server Side Rendering (SSR) in a React-Redux application involves rendering the initial content on the server side before delivering it to the client's browser. This approach optimizes both performance and SEO.\n\n\nImplementation process of the Server Side Rendering involves the below steps.\n\n\nSet up a Node JS server using Express.\n\nUse `ReactDOMServer.renderToString()` on each request to render the React components into an HTML string.\n\nUse Redux's `createStore` method to initialize the store on the server side. Preload the initial state and insert it into the HTML response as a script.\n\nDeliver the rendered HTML alongside the initial state to the client.\n\nThe client's JavaScript will then take over, hydrating the content and attaching event listeners.\n\n\n\nBenefits of implementing the Server Side Rendering process in a React-Redux application are given below.\n\n\nThe SSR technique in a React-Redux application speeds up initial page load, allowing users to see content immediately.\n\nThe SSR technique makes the page becomes interactive once the client-side JavaScript runs. This technique make search engines get a fully rendered HTML for SEO, enhancing content visibility.",
+    "difficulty": "Medium",
+    "followup_question": "How does implementing server-side rendering (ssr) with react-redux affect the handling of client-side state management and rehydration, and what best practices can be employed to minimize potential issues?",
+    "category": "Frontend development"
+  },
+  {
+    "question": " Can you write a custom middleware for Redux to handle asynchronous actions?",
+    "answer": "Yes, I can write a custom middleware for Redux to handle asynchronous actions. Middleware in Redux intercepts dispatched actions before they reach the reducer. This middleware return a function instead of an action object to handle asynchronous actions.\n\n\nHere's a basic example of an asynchronous middleware.\n\n\nThe middleware in the above code checks if the dispatched action is a function. The function gets called with `dispatch` and `getState` as arguments if it is dispatched, enabling asynchronous operations. The action otherwise proceeds to the next middleware or reducer. This approach is foundational to libraries like Redux Thunk.",
+    "difficulty": "Medium",
+    "followup_question": "How would you implement a retry mechanism in your custom middleware to re-send the failed request after a certain time interval or number of attempts?",
+    "category": "Redux"
+  },
+  {
+    "question": " Implement a React component that dynamically loads other components or modules using React.lazy and Suspense.",
+    "answer": "Follow the steps below to implement a React component that dynamically loads other components using React.lazy and Suspense.\n\n\nUse React.lazy to wrap the import statement for the component you wish to load lazily.\n\n\n\nconst LazyComponent = React.lazy(() => import('./LazyComponent'));\n\n\nUtilize the Suspense component to handle the loading state and display a fallback UI during the loading process.\n\n\n\nThis method ensures efficient code splitting, enabling faster initial page loads. Remember to include error boundaries for better error handling, especially when network issues arise.",
+    "difficulty": "Medium",
+    "followup_question": "How would you optimize the dynamic loading of components to prevent flickering or re-renders when the user interacts with the app, considering factors like shouldcomponentupdate, react.memo, and caching strategies?",
+    "category": "React hooks"
+  },
+  {
+    "question": " How would you dynamically define and use a ref inside a component loop?",
+    "answer": "Utilize the `useRef` and `useState` hooks provided by React to dynamically define and use a ref inside a component loop.\n\n\nHere is a step-by-step procedure to dynamically define and use a ref inside a component loop.\n\n\nInitialize an array of refs using the `useState` hook.\n\n\n\nFor example, initialize an array of refs as shown below.\n\n\nCreate and assign the ref for each item during the rendering phase inside the loop ashown below.\n\n\n\nAccess the ref directly through the `refs` array when needed. For instance, to access the third element, use `refs[2]`. Adjust the array size and update it accordingly, if the items' length changes.",
+    "difficulty": "Medium",
+    "followup_question": "How do you ensure that the ref is properly garbage collected when the component is removed from the dom to avoid memory leaks?",
+    "category": "React hooks"
+  },
+  {
+    "question": " Implement a complex animation in a React component using the React Spring library.",
+    "answer": "Here is an implementation of a complex animation where a card component flips horizontally when clicked, revealing its backside using the `react-spring` library.\n\n\nexport default FlipCard;\n\n\nThe code defines a `FlipCard` React component. The card will flip when clicked, revealing its backside. The `useSpring` hook from `react-spring` is used to define the animation's properties. The `transform` property is interpolated to achieve the flip effect, and the `opacity` property ensures the smooth transition between the front and back sides.",
+    "difficulty": "Medium",
+    "followup_question": "How would you use the `usesprings` hook from react spring to animate multiple interconnected elements simultaneously, ensuring that the animation is smooth and visually appealing?",
+    "category": "Animation"
+  },
+  {
+    "question": " Write a Higher Order Component (HOC) that adds scrolling event listeners and injects the scroll position as a prop to the wrapped component.",
+    "answer": "Follow the steps below to write a Higher Order Component (HOC) that adds scrolling event listeners and injects the scroll position as a prop to the wrapped component.\n\n\nCreate the HOC as shown below.\n\n\n\nEmploy this HOC to wrap any component as shown below.\n\n\n\nThe wrapped component (YourComponent) implemented in the above code receive a `scrollPosition` prop.",
+    "difficulty": "Medium",
+    "followup_question": "How would you ensure that the hoc is reusable across different components without tightly coupling it to a specific component's props or state?",
+    "category": "React hook"
+  },
+  {
+    "question": " Describe your approach to testing React applications. How do you decide what to test and which testing libraries and frameworks to use?",
+    "answer": "The approach to testing React applications involves understanding the component hierarchy and ensuring each component functions as expected. It's crucial to prioritize tests to focus on user interactions, critical paths, and complex logic within components with the continuous evolution of React.\n\n\nEmploy Jest for unit testing, given its seamless integration with React and its powerful mocking capabilities.\n\nUse React Testing Library for testing user interactions, as it emphasizes testing components in ways users would actually use them.\n\nGravitate towards tools like Cypress when dealing with end-to-end tests.\n\n\n\nDecisions on what to test are based on the component's impact on the user experience, potential failure points, and critical business logic.",
+    "difficulty": "Medium",
+    "followup_question": "What are some common pitfalls or edge cases that you consider when deciding what to test in a react application, and how do you ensure comprehensive coverage of these areas?",
+    "category": "Software testing"
+  },
+  {
+    "question": " Discuss a complex bug you have encountered in a React application and the process you went through to identify and fix it.",
+    "answer": "The complex bug i encountered in a React application is a bug where state updates were leading to unexpected re-renders.\n\n\nI pinpointed the component causing the excessive re-renders by employing React's built-in Developer Tools. The issue was an incorrect dependency array in a `useEffect` hook. The solution i followed is to refine the array to ensure only necessary state and props triggered the effect. Proper memoization using `React.memo` and `useMemo` further optimized the application.",
+    "difficulty": "Medium",
+    "followup_question": "How did you use debugging tools such as chrome devtools or console logging to isolate the problematic code and reproduce the issue?",
+    "category": "Bug fixing"
+  },
+  {
+    "question": " How do you debug memory leaks in a large-scale React application?",
+    "answer": "Utilize profiling tools and techniques offered by React to debug memory leaks in a large-scale React application. The React Developer Tools extension, particularly its Profiler tab, is instrumental in identifying wasteful renders and potential memory issues.\n\n\nFollow the below practices to debug memory leaks in a large-scale React application.\n\n\nMonitor heap size and object allocations using Chrome's built-in DevTools Memory tab to pinpoint leaks.\n\nAnalyze component lifecycles and ensure proper cleanup, especially when using event listeners or third-party libraries.\n\nAnalyze the lifecycle of the components, if components are frequently unmounting and remounting.\n\nRemove unused subscriptions and clearInterval or clearTimeout when components unmount. Use libraries like `why-did-you-render` to help spot unnecessary re-renders that cause memory bloat.",
+    "difficulty": "Medium",
+    "followup_question": "How do you identify the root cause of memory leaks when dealing with a complex and highly interconnected react component tree?",
+    "category": "Software engineering"
+  },
+  {
+    "question": " Describe your approach to conducting a code review for a pull request that contains several React components. What would you look for?",
+    "answer": "Follow the below approach to conduct a code review for a pull request that contains several React components involves several key considerations.\n\n\nEnsure each component adheres to the single responsibility principle, meaning it should accomplish one thing well.\n\nLook for consistency in code style and naming conventions is paramount, as it ensures maintainability.\n\nCheck performance optimizations, such as the use of React's memoization techniques or the efficient use of hooks.\n\nAssure correct usage of state and props, ensuring data flows correctly and without unnecessary re-renders.\n\nReview tests accompanying the components to guarantee robustness.\n\nPrioritize security by looking for any potential vulnerabilities, especially if third-party libraries are in use.",
+    "difficulty": "Medium",
+    "followup_question": "What specific coding conventions, best practices, and testing strategies would you prioritize reviewing in each react component to ensure maintainability, scalability, and performance?",
+    "category": "Frontend"
+  },
+  {
+    "question": " How would you test a custom Hook in React? Provide an example.",
+    "answer": "Utilize the `@testing-library/react-hooks` package to test a custom Hook in React. The `@testing-library/react-hooks` library offers a function called `renderHook` that allows developers to render and test custom hooks in isolation.\n\n\nFor instance, consider a custom hook `useCounter` that provides functionality to increment and decrement a value:\n\n\nHere is an example to test the above hook.\n\n\nUse `act` to wrap any code that change the state of the hook. This ensures the changes are applied immediately, allowing for proper assertions.",
+    "difficulty": "Easy",
+    "followup_question": "What specific scenarios or edge cases would you consider to thoroughly test the custom hook's functionality, and how would you ensure it's robust enough for different component compositions and use cases?",
+    "category": "Testing & hooks"
+  },
+  {
+    "question": " How do you ensure smooth interaction and styling when integrating React components into an existing project that uses a different technology stack?",
+    "answer": "Follow the below approach to ensure smooth interaction and styling when integrating React components into an existing project that uses a different technology stack.\n\n\nIsolate the React components using encapsulated styles, ensuring they don't interfere with existing styles. Utilize tools like CSS Modules or Styled Components to achieve this.\n\nTest the integration extensively across different parts of the application.\n\nAddress any conflicts or inconsistencies promptly, ensuring compatibility and seamless user experience.\n\nKeep the React dependencies updated and aligned with the project's other technologies. This ensures optimal performance and reduces the chances of integration issues.",
+    "difficulty": "Easy",
+    "followup_question": "How do you handle potential conflicts between react's component lifecycle methods (e.g., componentdidmount, componentdidupdate) and the existing project's codebase, ensuring seamless integration and avoiding any unintended side effects?",
+    "category": "Front-end development"
+  },
+  {
+    "question": " Explain how to integrate React with Websockets for real-time data.",
+    "answer": "Utilize libraries like socket.io or the native WebSocket API to integrate React with Websockets for real-time data by following the below approach..\n\n\nEstablish a connection to the WebSocket server.\n\nSet up event listeners in your React components once connected to handle incoming messages or data.\n\nCreate a WebSocket connection in the React component's lifecycle methods, during the `componentDidMount` phase.\n\nClose this connection in the `componentWillUnmount` phase to avoid memory leaks. React's state management is then leveraged to update the UI based on real-time data received.\n\nUpdate the component's state with the incoming data, and the UI will re-render automatically. Ensure secure WebSocket connections (WSS) when dealing with sensitive data or production environments.",
+    "difficulty": "Medium",
+    "followup_question": "How would you implement websocket connections in a react application, and what libraries or tools would you use to handle the bi-directional communication between the client and server?",
+    "category": "Web development"
+  },
+  {
+    "question": " How would you approach implementing internationalization (i18n) in a large-scale React application?",
+    "answer": "Follow the below approach to implement internationalization (i18n) in a large-scale React application by utilizing libraries such as `react-i18next` or `react-intl`. These libraries facilitate the translation of the application's content based on user preferences or system settings.\n\n\nSet up the `react-i18next` library.\n\nDefine the translation files in JSON format for each language.\n\nUtilize the `useTranslation` hook or the `withTranslation` higher-order component to access translation functions within the React components.\n\nOptimize the user experience by automatically detecting the user's locale or providing a language switcher.\n\nEnsure proper testing.\n\nValidate the translations on various screen sizes and devices, especially if the app relies on dynamic strings or complex interpolation. Addressing this early on prevent potential layout or readability issues.",
+    "difficulty": "Medium",
+    "followup_question": "What specific steps would you take to ensure that all ui components, including third-party libraries and custom components, are properly localized and translated for different languages and regions?",
+    "category": "Localization"
+  },
+  {
+    "question": " Discuss the steps involved in setting up a CI/CD pipeline for a React application.",
+    "answer": "The steps involved in setting up a CI/CD pipeline for a React application are discussed below.\n\n\nEstablish a version control system using platforms like GitHub or Bitbucket.\n\nIntegrate a Continuous Integration (CI) tool like Jenkins, CircleCI, or Travis CI. Ensure that this tool automatically triggers a build and runs tests on each push to the repository.\n\nDeploy the application automatically to a staging environment using tools like AWS Amplify, Netlify, or Vercel after a successful build.\n\nAutomate the production deployment once verified in staging.\n\nUse feature flags, if needed, to roll out new features incrementally.\n\nMonitor the application post-deployment for any potential issues.\n\n\n\nRegular feedback and adapting the pipeline based on project needs is vital. Adjust the steps accordingly, especially if integrating with other services or platforms.",
+    "difficulty": "Medium",
+    "followup_question": "What tools and technologies would you recommend using to automate testing, building, and deploying stages of the ci/cd pipeline for a react application?",
+    "category": "Devops"
+  },
+  {
+    "question": " How would you automate End-to-End testing for a React SPA (Single Page Application)?",
+    "answer": "Utilize testing frameworks like Cypress and Puppeteer for automating End-to-End testing for a React Single Page Applications.\n\n\nHere is a concise approach to automate End-to-End testing for a React SPA.\n\n\nWrite test cases that emulate user behaviors on the application, ensuring that all key user flows are captured.\n\nExecute these tests using the selected tool, integrating them into the Continuous Integration/Continuous Deployment (CI/CD) pipeline for regular checks.\n\nMonitor test results consistently, addressing any failures or inconsistencies.\n\nMaintain and update tests as the React application evolves, ensuring test reliability and relevance.",
+    "difficulty": "Medium",
+    "followup_question": "How would you integrate cypress or another end-to-end testing framework with your existing ci/cd pipeline, such as jenkins or circleci?",
+    "category": "**test automation**"
+  },
+  {
+    "question": " Discuss the new features in the latest version of React and how you have used them (or plan to use them) in your projects.",
+    "answer": "The new features in the latest version of React enhance the component-based architecture and developer experience. One notable addition is the concurrent rendering mechanism. This feature allows React to work on multiple tasks simultaneously without blocking the main thread, resulting in smoother user experiences. I integrated concurrent rendering to optimize the responsiveness of the user interface during heavy computations. Another significant feature is the introduction of automatic batching. This minimizes the number of re-renders, improving performance. I plan to implement this in my upcoming projects to boost efficiency. Adopting these features ensures applications remain performant and user-centric.",
+    "difficulty": "Medium",
+    "followup_question": "How did you leverage the improved server-side rendering capabilities in react 17 to optimize rendering performance and improve user experience in a recent project?",
+    "category": "\"react features\""
+  },
+  {
+    "question": " How does Concurrent Mode enhance user experience in React applications, and how would you implement it?",
+    "answer": "Concurrent Mode enhances user experience in React applications by enabling smoother visual updates, improved responsiveness, and more efficient rendering. React Concurrent Mode allows multiple rendering tasks to interleave, ensuring that high-priority tasks, like user interactions, interrupt and preempt low-priority tasks. This results in a more fluid user experience, especially in applications with heavy computation or data-fetching requirements.\n\n\nFollow the below steps to implement Concurrent Mode.\n\n\nWrap the application or part of it with the `React.createRoot()` method instead of the traditional `ReactDOM.render()`.\n\nEnsure that the components are compatible with the concurrent rendering approach.\n\nBe mindful of potential pitfalls, such as deprecated lifecycle methods or relying on render phase side effects, as these introduce bugs in Concurrent Mode.\n\nTest the application thoroughly before deploying to production, as Concurrent Mode reveal hidden bugs in components that were previously masked in synchronous mode.",
+    "difficulty": "Medium",
+    "followup_question": "What are some specific scenarios where concurrent mode can significantly improve the responsiveness and performance of a react application, and how would you measure its impact on user engagement metrics such as time-to-interact or bounce rate?",
+    "category": "Concurrency"
+  },
+  {
+    "question": " What are the potential issues with React Server Components, and how could they affect existing React applications?",
+    "answer": "The potential issues with React Server Components are multifaceted, impacting both performance and compatibility. The potential issues with React Server Components are listed below.\n\n\nReact Server Components rely on the server for rendering, which introduce latency if server resources are constrained or network conditions are poor. This slow down user interactions and reduce perceived performance.\n\nReact Server Components don't support client-side interactivity out of the box. This means the developers need to carefully manage the interplay between server components and client components to achieve the desired user experience. Integrating server components into existing React applications necessitate codebase modifications, potentially breaking existing functionality.\n\nCompatibility concerns arise when mixing server components with libraries or frameworks that expect client-side-only rendering. This leads to unexpected behaviors or crashes, if not properly handled.",
+    "difficulty": "Medium",
+    "followup_question": "How would you optimize the performance of react server components to minimize the impact on existing applications that rely heavily on client-side rendering and reconciliation?",
+    "category": "**server-side rendering**"
+  },
+  {
+    "question": " Discuss how the latest advancements in React Dev Tools can aid in debugging and profiling large scale applications.",
+    "answer": "The latest advancements in React Dev Tools greatly aid in debugging and profiling large scale applications. Developers now pinpoint performance bottlenecks more efficiently with the introduction of component-level profiling. Enhanced filtering options enable users to focus on specific parts of the component tree, streamlining the debugging process. The improved component inspection provides deeper insights into the current state and props, enhancing clarity. Troubleshooting and optimizing large-scale React applications thus become more straightforward by using these updated tools in the React applications.",
+    "difficulty": "Medium",
+    "followup_question": "How do react development tools such as react developer tools, codesandbox, or create react app's built-in features help in identifying performance bottlenecks and memory leaks in complex react applications?",
+    "category": "React"
+  },
+  {
+    "question": " How do the latest ECMAScript features enhance your React components, and can you provide examples of their usage?",
+    "answer": "The latest ECMAScript features enhance React components by introducing more concise syntax, improved performance, and better maintainability. Developers craft more readable and efficient React code by utilizing these features.\n\n\nExamples of using the latest ECMAScript features are listed below.\n\n\nOptional chaining (`?.`) allows for safer property access without explicitly checking if each nested property exists. Developers simply use `props?.user?.name` instead of writing `if (props && props.user && props.user.name)`.\n\nThe nullish coalescing operator (`??`) provides a way to handle default values more reliably. `const username = props.user.name ?? \"Guest\"` ensures defaults are assigned only if the value is `null` or `undefined` rather than `const username = props.user.name || \"Guest\"`, which overwrite falsy values like an empty string.\n\n\n\nThe use of ECMAScript's native modules in React components helps in optimizing the build process, leading to smaller bundles. For example, dynamic imports (`import()`) enable code splitting and lazy loading of components, ensuring better application performance.",
+    "difficulty": "Medium",
+    "followup_question": "What specific ecmascript features have been most useful in improving code maintainability and readability within your react applications, and how have they reduced the need for additional libraries or workarounds?",
+    "category": "Frontend"
+  },
+  {
+    "question": "How does the Interview Questions Intended for React JS Developers Work?",
+    "answer": "Interview questions intended for React developers work as a vital part of the hiring process by evaluating a candidate's knowledge, problem-solving skills, and suitability for a role involving React development. Here's how they operate.\n\n\n\nAssessment: Hiring managers use React interview questions to assess a candidate's proficiency in React, including their understanding of concepts, best practices, and real-world application of skills.\n\n\nProblem-Solving: The questions are designed to present candidates with real or hypothetical scenarios where they must apply their Angular expertise to solve challenges. This assesses their ability to think critically and find practical solutions.\n\n\nSkill Evaluation: Through interview questions, recruiters evaluate a candidate's skills related to React components, services, routing, state management, and more. They also gauge the candidate's knowledge of related technologies like RxJS.\n\n\nTechnical Depth: These questions help probe the depth of a candidate's technical knowledge. Whether it's about optimizing performance, debugging, or handling complex scenarios, interviewers gauge how well candidates understand these areas.\n\n\nBehavioral Insights: Interview questions can reveal how candidates approach problems, communicate their thought process, and collaborate with team members, offering insights into their behavioral attributes.\n\n\nCandidate Demonstration: These questions for candidates provide an opportunity to demonstrate their skills, showcase their portfolio of work, and prove their capability as React developers.\n\n\nLearning and Growth: Interview questions are a valuable learning experience even if a candidate doesn't secure the position. They highlight areas for improvement and encourage candidates to continue their professional development.\n\n\n\nReact JS interview questions serve as a comprehensive tool for both employers and candidates. They help match the right talent with the right roles, ensuring successful and efficient React JS development projects.",
+    "difficulty": "Medium",
+    "followup_question": "What are some common pitfalls to avoid when implementing state management in a react application, and how would you handle them?",
+    "category": "Frontend"
+  },
+  {
+    "question": "What does a React JS Developer do?",
+    "answer": "A React JS Developer is responsible for designing and implementing user interfaces using React JS, a popular JavaScript library for building interactive and dynamic web applications. They play a pivotal role in creating engaging and efficient front-end experiences for web users. React JS Developers work with a combination of JavaScript, HTML, and CSS to build responsive and user-friendly web applications.\n\n\nThese professionals are essential in the software development industry as React JS has become a cornerstone technology for front-end development. They are adept at creating reusable UI components, managing state and data flow, and optimizing the performance of web applications. React JS Developers also work closely with designers and backend developers to ensure seamless integration of the user interface with the overall application.",
+    "difficulty": "Easy",
+    "followup_question": "What are some of the core responsibilities and skills required to effectively manage state, handle side effects, and optimize performance in a react application?",
+    "category": "Front-end"
+  },
+  {
+    "question": "Are React JS Developers Programmers?",
+    "answer": "Yes, React JS developers are programmers because React JS is a renowned JavaScript library used for crafting web applications. Developers must be adept programmers capable of authoring code, grasping programming paradigms, and implementing software engineering tenets to adeptly work with React JS. React JS developers engage with languages like JavaScript and JSX, utilizing them to form the logic, components, and functionality of web applications.\n\n\nReact JS developers write and sustain code, tackle intricate challenges, and adhere to the best practices in software development. They are entrusted with designing user interfaces, managing state, handling user events, and ensuring applications are agile, maintainable, and scalable. They possess the prowess to dissect requirements, blueprint the architecture of an application, incorporate features, and test their code to ascertain it aligns with the delineated standards as programmers. So, React JS developers are not mere aficionados of a library; they are accomplished programmers who exploit React JS to develop contemporary web applications.",
+    "difficulty": "Easy",
+    "followup_question": "Do react js developers require additional programming skills beyond those provided by javascript, or can their expertise be focused solely on building reactive user interfaces?",
+    "category": "Javascript"
+  },
+  {
+    "question": "What System does React JS Developer Work?",
+    "answer": "React JS developers primarily use popular operating systems like macOS, Windows, and Linux. The choice depends on personal preference and development environment requirements. The macOS and Linux offer a more straightforward setup for various development tools, Windows provides versatility with its Windows Subsystem for Linux. Developers choose an OS that aligns best with their workflow. Selecting an OS also hinges on the project's specific requirements, integration needs, and team collaboration.",
+    "difficulty": "Medium",
+    "followup_question": "What are some common systems or frameworks that a reactjs developer might work on, such as node.js, express.js, or graphql?",
+    "category": "Frontend"
+  },
+  {
+    "question": "What are React JS App Development Tools and Software React JS Developers Use?",
+    "answer": "React JS developers utilize a range of tools and software to streamline their app development process. Here is a list of tools and software React JS developers use.\n\n\n\nCreate React App: This is the official scaffolding tool to set up a new React single-page application. Developers use this tool to avoid manual configuration and build boilerplate.\n\n\nRedux and Redux DevTools: Redux manages application state, while its DevTools extension allows for real-time debugging.\n\n\nReact Router: This tool provides routing capabilities, enabling the creation of single-page apps with navigation.\n\n\nWebpack: Webpack bundles and optimizes JavaScript and asset files, ensuring efficient load times for applications.\n\n\nBabel: Babel transpiles modern JavaScript ES6 and JSX into ES5, making React code browser-compatible.\n\n\nReact Developer Tools: React Developer Tools is an extension for Chrome and Firefox, it lets developers inspect the React component hierarchy.\n\n\nStorybook: It offers a UI development environment, allowing developers to visualize components in isolation.\n\n\nJest and Enzyme: They are the popular testing libraries for React, they assist developers in writing and executing tests for components.",
+    "difficulty": "Medium",
+    "followup_question": "What are some popular integrated development environments (ides) that react js developers use to streamline their development workflow?",
+    "category": "Development tools"
+  },
+  {
+    "question": "How do React JS Developers Test their Applications?",
+    "answer": "React JS Developers test their Applications by following the below approaches.\n\n\n\nUnit Testing: Utilize libraries like \"Jest\" and \"React Testing Library\" to test individual components in isolation.\n\n\nIntegration Testing: Test interactions between components and verify that they work together seamlessly. Tools like \"Enzyme\" are commonly employed.\n\n\nEnd-to-End Testing: Use tools like \"Cypress\" or \"Puppeteer\" to simulate real-world user scenarios and validate the entire application flow.\n\n\nMocking: Implement mock functions and servers, like \"msw\" or \"jest.mock()\", to replicate external interactions without making actual API calls.\n\n\nSnapshot Testing: Capture and compare UI snapshots over time using Jest. This ensures visual consistency.\n\n\nContinuous Integration (CI): Integrate testing into a CI pipeline, such as with \"GitHub Actions\" or \"Jenkins\", to automatically run tests on every code push or pull request.\n\n\nCoverage Analysis: Use tools like \"Istanbul\" with Jest to assess code coverage and determine untested sections of the application.\n\n\nPerformance Testing: Monitor performance benchmarks and regressions, employing libraries like \"Why Did You Render\".\n\n\nManual Testing: check the application periodically in different browsers and devices for any UI/UX inconsistencies.\n\n\nType Checking: Incorporate static type checkers like \"TypeScript\" or \"Flow\" to catch type-related errors during development.",
+    "difficulty": "Medium",
+    "followup_question": "How do react js developers ensure their applications are scalable and performant in production environments?",
+    "category": "Development"
+  },
+  {
+    "question": "How does a React JS Developer Different Compare to an JavaScript Developer?",
+    "answer": "A React JS Developer differ compared to a JavaScript Developer in their specialization and breadth of knowledge.\n\n\nA React JS Developer primarily focuses on building user interfaces using the React JS library. They are experts in component-based architecture, understanding lifecycle methods, and handling state and props. They are well-versed in hooks, concurrent mode, and server components. A JavaScript Developer has a broader skill set, dealing with various aspects of the JavaScript language itself, and are not limited to a single library or framework. They are likely to understand core JavaScript concepts, like closures, promises, and event loops.\n\n\nEven the expertise of a React JS Developer is anchored in React and its ecosystem, both profiles share foundational knowledge in JavaScript. This means they are both skilled in ES6+ features, asynchronous operations, and manipulating the Document Object Model (DOM). A React JS Developer will leverage React's virtual DOM, a generic JavaScript Developer manipulate the DOM directly or use other libraries.",
+    "difficulty": "Medium",
+    "followup_question": "What are the key skills and technologies that a react js developer uses that sets them apart from a general javascript developer, and how do they leverage these differences in their daily work?",
+    "category": "Frontend"
+  },
+  {
+    "question": "How does a React JS Developer Different Compare to a Angular Developer?",
+    "answer": "A React JS Developer is different compare to an Angular Developer in their core expertise and the tools they utilize. React JS is a library primarily used for building user interfaces, Angular is a comprehensive framework for building web applications.\n\n\nAngular offers a full-fledged solution, including dependency injection, routing, and forms, out of the box. Angular developers typically need to be familiar with TypeScript, as it's the primary language for Angular development. React JS focuses on the view layer, requiring third-party libraries for routing or state management. React developers use JavaScript or TypeScript, giving them flexibility in their coding approach.\n\n\nBoth React and Angular prioritize component-based architecture, promoting reusability of code. Both tools are backed by tech giants, with React by Facebook and Angular by Google, ensuring active community support and regular updates. Performance optimization and virtual DOM manipulation are essential aspects in both ecosystems.",
+    "difficulty": "Medium",
+    "followup_question": "What are some key differences in their workflow, such as project setup, component structure, or state management approaches?",
+    "category": "Frontend development"
+  },
+  {
+    "question": "How does a React JS Developer Different from a NodeJS Developer?",
+    "answer": "A React JS developer is different from a Node JS developer primarily in their focus and specialization within the JavaScript ecosystem. Both technologies are integral to modern web development, they serve distinct purposes and require different skill sets.\n\n\nReact JS is a front-end JavaScript library used for building user interfaces. React developers specialize in creating interactive and dynamic web applications, emphasizing the user interface and user experience. They are adept at creating reusable UI components, managing application state, and optimizing performance for web applications. React JS developers frequently work on the client side of web applications and collaborate closely with designers to ensure a seamless user interface.\n\n\nNode JS is a server-side JavaScript runtime environment. Node JS developers focus on building server-side applications, handling server logic, and managing data flow between the client and server. They are skilled in creating scalable and efficient back-end systems, handling HTTP requests, and working with databases. Node JS developers play a crucial role in building the server-side architecture that supports React JS applications.\n\n\nSimilarities between React JS and Node JS developers include their proficiency in JavaScript, as both technologies rely on it. Both developers need a good understanding of asynchronous programming and the ability to work with npm (Node Package Manager) for managing dependencies. But their primary areas of expertise and responsibilities within a web development project set them apart.\n\nAre React JS Developers well-versed in developing applications Using a Component Based Architecture?\n\n\nYes, React JS Developers are indeed well-versed in developing applications using a Component-Based Architecture. This proficiency in component-based architecture is a fundamental skill that React developers must possess to excel in competitive landscape of React JS development.\n\n\nReact's core principle revolves around breaking down user interfaces into modular and reusable components. Each component encapsulates its own logic, rendering, and state management. This approach offers several advantages, such as easier code maintenance, scalability, and code reusability. React's Component-Based Architecture promotes a structured and organized codebase, making it more efficient for developers to collaborate and maintain large-scale applications.\n\nDoes React JS Developers have Deep Understanding of the Virtual DOM Concept?\n\nYes, React JS developers must possess a deep understanding of the Virtual DOM concept.\n\n\nThe Virtual DOM (Document Object Model) is a crucial aspect of React, which is a JavaScript library for building user interfaces. React uses a virtual representation of the actual DOM to optimize rendering performance. Developers need to comprehend this concept thoroughly to create efficient and responsive web applications. They understand how React's reconciliation algorithm works, allowing it to update only the parts of the actual DOM that have changed, rather than re-rendering the entire DOM. This knowledge is essential for optimizing React applications and ensuring a smooth user experience.\n\n\nCandidates are assessed on their understanding of the Virtual DOM concept, as it forms the foundation of React's efficiency and performance.\n\nAre React JS Developers Considered Software Engineers?\n\nYes, React JS developers are indeed considered software engineers. This classification stems from the fact that React JS, although a JavaScript library for building user interfaces, is an integral component of modern software development. React JS developers referred to as front-end engineers, possess the essential skills and expertise required to engineer web applications and user interfaces.\n\n\nReact JS developers are responsible for designing and implementing user interfaces, managing state, handling data flow, and optimizing performance, among other critical software engineering tasks. They utilize principles of software engineering such as modularization, code reusability, and maintaining clean and maintainable codebases. Their role is pivotal in the development process, as they collaborate with back-end engineers, designers, and other stakeholders to create seamless user experiences.\n\n\nReact JS developers are a subset of software engineers who specialize in front-end development, making them essential contributors to the software development process. Their proficiency in React JS and associated technologies positions them as integral members of software engineering teams working on web-based applications.",
+    "difficulty": "Medium",
+    "followup_question": "What are the key differences in their skill sets and responsibilities that allow them to excel in different areas of software development?",
+    "category": "Frontend vs backend"
+  }
+]
