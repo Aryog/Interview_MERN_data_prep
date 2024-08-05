@@ -1,0 +1,502 @@
+[
+  {
+    "question": "What is HTML and what does it stand for?",
+    "answer": "HTML stands for HyperText Markup Language. HTML is the standard markup language used to create and design web pages by defining the structure and layout through various tags and attributes.",
+    "difficulty": "Easy"
+  },
+  {
+    "question": "Can you explain the basic structure of an HTML document?",
+    "answer": "The basic structure of an HTML document includes the <!DOCTYPE html> declaration, followed by <html> tag, which contains the <head> section and the <body> section. The <head> section holds meta-information and links to scripts and stylesheets, while the <body> section contains the content displayed on the web page.",
+    "difficulty": "Easy"
+  },
+  {
+    "question": "What are HTML tags?",
+    "answer": "HTML tags are the building blocks of HTML, used to define elements within a web page. These tags are enclosed in angle brackets, such as <tagname>, and usually come in pairs with a start tag and an end tag.",
+    "difficulty": "Easy"
+  },
+  {
+    "question": "How do you create a hyperlink in HTML?",
+    "answer": "You create a hyperlink in HTML using the <a> tag, specifying the URL in the href attribute. This element allows users to navigate to other web pages or resources.",
+    "difficulty": "Medium"
+  },
+  {
+    "question": "What is the purpose of the doctype declaration in HTML?",
+    "answer": "The doctype declaration in HTML tells the web browser which version of HTML the page is written in. It ensures the browser renders the page correctly according to the HTML standards.",
+    "difficulty": "Easy"
+  },
+  {
+    "question": "How do you insert an image into an HTML page?",
+    "answer": "You insert an image into an HTML page using the <img> tag and specifying the image source with the src attribute. The alt attribute provides alternative text if the image cannot be displayed.",
+    "difficulty": "Easy"
+  },
+  {
+    "question": "What are the differences between <div> and <span> tags in HTML?",
+    "answer": "The difference between <div> and <span> tags in HTML is that <div> is a block-level element used for grouping and styling large sections of content, while <span> is an inline element used to style small portions of text or other elements within a block.",
+    "difficulty": "Easy"
+  },
+  {
+    "question": "How do you create a table in HTML?",
+    "answer": "You create a table in HTML using the <table> tag, along with <tr> for table rows, <td> for table cells, and optionally <th> for table headers. These elements structure the table layout.",
+    "difficulty": "Easy"
+  },
+  {
+    "question": "What is the function of the <head> section in an HTML document?",
+    "answer": "The function of the <head> section in an HTML document is to contain meta-information about the document, links to stylesheets, external files, and scripts that are not displayed directly on the web page.",
+    "difficulty": "Easy"
+  },
+  {
+    "question": "How do you use HTML to create a list?",
+    "answer": "You use HTML to create a list by using the <ul> tag for an unordered list, with <li> tags for each item, or the <ol> tag for an ordered list, also with <li> tags for each item.",
+    "difficulty": "Easy"
+  },
+  {
+    "question": "What is the difference between ordered and unordered lists in HTML?",
+    "answer": "The ordered lists (<ol>) display items in a numbered format. The unordered lists (<ul>) display items with bullet points.",
+    "difficulty": "Medium"
+  },
+  {
+    "question": "How do you add a comment in an HTML document?",
+    "answer": "You add a comment in an HTML document by enclosing the comment text within <!-- and -->. Comments are not displayed in the web browser but can be seen in the page source.",
+    "difficulty": "Easy"
+  },
+  {
+    "question": "What is the purpose of the <form> tag in HTML?",
+    "answer": "The purpose of the <form> tag in HTML is to create an interactive form where users can enter data. This data can then be sent to a server for processing.",
+    "difficulty": "Easy"
+  },
+  {
+    "question": "How do you make text bold in HTML?",
+    "answer": "You make text bold in HTML using the <strong> or <b> tag, which increases the emphasis or simply style the text as bold without implying importance.",
+    "difficulty": "Easy"
+  },
+  {
+    "question": "What is the difference between the <strong> and <b> tags in HTML?",
+    "answer": "The <strong> indicates importance and semantic emphasis. The <b> is used purely for visual styling without conveying any special importance.",
+    "difficulty": "Medium"
+  },
+  {
+    "question": "How do you create a dropdown list in HTML?",
+    "answer": "You create a dropdown list in HTML using the <select> tag, which contains multiple <option> tags for each item in the list. Users can select one of the options from the dropdown.",
+    "difficulty": "Easy"
+  },
+  {
+    "question": "What is an iframe in HTML, and how do you use it?",
+    "answer": "An iframe in HTML is an inline frame used to embed another document within the current HTML document. You use it with the <iframe> tag, specifying the source of the document with the src attribute.",
+    "difficulty": "Easy"
+  },
+  {
+    "question": "How do you make a webpage responsive using HTML?",
+    "answer": "You make a webpage responsive using HTML by employing responsive meta tags in the <head> section, like <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">, and by using flexible layouts, images, and CSS media queries.",
+    "difficulty": "Medium"
+  },
+  {
+    "question": "What are semantic HTML tags?",
+    "answer": "Semantic HTML tags provide information about the contents of those tags that goes beyond just how they look on a page. Examples include <article>, <footer>, <header>, <nav>, and <section>, which define parts of a web page or its structure.",
+    "difficulty": "Easy"
+  },
+  {
+    "question": "How do you define a header section in an HTML document?",
+    "answer": "To define a header section in an HTML document using the <header> tag, which typically contains introductory content, navigation links, or logos.",
+    "difficulty": "Easy"
+  },
+  {
+    "question": "What is the purpose of the <footer> tag in HTML?",
+    "answer": "The purpose of the <footer> tag in HTML is to define the footer section of a document or section, usually containing copyright information, contact details, or links to related documents.",
+    "difficulty": "Medium"
+  },
+  {
+    "question": "How do you include JavaScript in an HTML document?",
+    "answer": "To include JavaScript in an HTML document by using the <script> tag, either by embedding the script directly within the tag or by specifying the path to an external JavaScript file with the src attribute.",
+    "difficulty": "Medium"
+  },
+  {
+    "question": "What is the difference between the <section> and <article> tags in HTML?",
+    "answer": "The <section> is used for grouping thematically related content. The <article> is used for self-contained, independently distributable content.",
+    "difficulty": "Easy"
+  },
+  {
+    "question": "How do you embed a video in an HTML document?",
+    "answer": "To embed a video in an HTML document using the <video> tag, specifying the source of the video with the src attribute and adding controls with the controls attribute.",
+    "difficulty": "Easy"
+  },
+  {
+    "question": "What are entities in HTML, and why are they used?",
+    "answer": "Entities in HTML are used to represent special characters that are reserved in HTML or not easily entered with a keyboard. They start with & and end with \u2018;\u2019 like & for the ampersand symbol.",
+    "difficulty": "Easy"
+  },
+  {
+    "question": "How do you create a line break in HTML?",
+    "answer": "To create a line break in HTML using the <br> tag, which inserts a single line break in the text.",
+    "difficulty": "Easy"
+  },
+  {
+    "question": "What is the purpose of the <nav> element in HTML?",
+    "answer": "The purpose of the <nav> element in HTML is to define a section of a page that links to other pages or to parts within the page, which is often used for navigation menus.",
+    "difficulty": "Medium"
+  },
+  {
+    "question": "How do you specify the character encoding in an HTML document?",
+    "answer": "To specify the character encoding in an HTML document with a <meta> tag in the <head> section, using the charset attribute, like <meta charset=\"UTF-8\">.",
+    "difficulty": "Medium"
+  },
+  {
+    "question": "What are data attributes in HTML, and how are they used?",
+    "answer": "Data attributes in HTML are used to store custom data directly within HTML elements, accessible by JavaScript. They are prefixed with data-, followed by the attribute name.",
+    "difficulty": "Medium"
+  },
+  {
+    "question": "How do you make an HTML element invisible without removing it from the document?",
+    "answer": "To make an HTML element invisible without removing it from the document by using the CSS display: none; or visibility: hidden; property. display: none; removes the element from the document layout, while visibility: hidden; makes it invisible but still takes up space in the layout.",
+    "difficulty": "Easy"
+  },
+  {
+    "question": "How do you apply CSS styles to an HTML document?",
+    "answer": "To apply CSS styles to an HTML document in three ways: inline styles using the style attribute directly within HTML tags, internal styles using the <style> tag within the <head> section, and external styles by linking to a CSS file with the <link> tag.",
+    "difficulty": "Easy"
+  },
+  {
+    "question": "What is the difference between classes and IDs in HTML?",
+    "answer": "The classes can be used multiple times within a document to group elements for styling. The IDs are unique identifiers for a single element.",
+    "difficulty": "Easy"
+  },
+  {
+    "question": "Can you explain the concept of the Document Object Model (DOM)?",
+    "answer": "The Document Object Model (DOM) is a programming interface for web documents. It represents the page so that programs can change the document structure, style, and content. The DOM represents the document as nodes and objects; thus, programming languages can interact with the page.",
+    "difficulty": "Medium"
+  },
+  {
+    "question": "How do you implement HTML forms for user input?",
+    "answer": "To implement HTML forms for user input using the <form> tag, which contains form elements like <input>, <textarea>, <button>, and <select> that allow users to enter data.",
+    "difficulty": "Easy"
+  },
+  {
+    "question": "What are the methods for including JavaScript in an HTML document?",
+    "answer": "The methods for including JavaScript in an HTML document are by embedding script directly within the <script> tag or by linking to an external JavaScript file using the src attribute of the <script> tag.",
+    "difficulty": "Medium"
+  },
+  {
+    "question": "How do you ensure your HTML page is accessible to people with disabilities?",
+    "answer": "Ensure your HTML page is accessible to people with disabilities by using semantic HTML tags, ensuring proper use of <a> tags for navigable content, providing alternative text for images with the alt attribute, and ensuring forms are labeled correctly.",
+    "difficulty": "Medium"
+  },
+  {
+    "question": "What is the purpose of the <meta> tag in HTML?",
+    "answer": "The purpose of the <meta> tag in HTML is to provide metadata about the HTML document, such as character encoding, author, and viewport settings, that is not displayed directly on the webpage but is useful for browsers and search engines.",
+    "difficulty": "Easy"
+  },
+  {
+    "question": "How do you use HTML5 semantic elements to improve page structure?",
+    "answer": "To use HTML5 semantic elements to improve page structure by using tags like <header>, <footer>, <article>, <section>, and <nav>. These elements define the different parts of a web page, making it more readable and accessible.",
+    "difficulty": "Medium"
+  },
+  {
+    "question": "What are some new form elements introduced in HTML5?",
+    "answer": "Some new form elements introduced in HTML5 include <datalist>, for providing an \"autocomplete\" feature; <range>, for inputting a value within a specific range; and <email>, <url>, <date>, <time>, <color>, for more specific user input types.",
+    "difficulty": "Medium"
+  },
+  {
+    "question": "How do you use the <canvas> element in HTML5?",
+    "answer": "To use the <canvas> element in HTML5 by specifying it in the HTML to define a drawing area, and then using JavaScript to draw graphics on it, such as animations, game graphics, or other visual images.",
+    "difficulty": "Medium"
+  },
+  {
+    "question": "What are Web Workers in HTML5, and how do you use them?",
+    "answer": "Web Workers in HTML5 are used to run scripts in background threads. You use them by creating a new Worker object in your JavaScript code and specifying the script to be run in this background thread, allowing for tasks to be performed without interfering with the user interface.",
+    "difficulty": "Medium"
+  },
+  {
+    "question": "How do you handle browser compatibility in your HTML coding?",
+    "answer": "To handle browser compatibility in your HTML coding by using cross-browser compatible HTML and CSS code, employing feature detection libraries like Modernizr, and providing fallbacks or polyfills for unsupported HTML5 features in older browsers.",
+    "difficulty": "Easy"
+  },
+  {
+    "question": "What is the significance of HTML5 Web Storage?",
+    "answer": "The significance of HTML5 Web Storage is that it allows for data to be stored locally within the user's browser, enabling web applications to store data persistently or session-based, improving performance and user experience without reliance on server-based cookies.",
+    "difficulty": "Easy"
+  },
+  {
+    "question": "How do you implement audio and video in HTML5?",
+    "answer": "To implement audio and video in HTML5 using the <audio> and <video> tags, respectively, specifying the source files with the src attribute or within <source> tags for multiple formats to ensure compatibility across different browsers.",
+    "difficulty": "Medium"
+  },
+  {
+    "question": "What are some HTML5 APIs, and how are they used?",
+    "answer": "Some HTML5 APIs include the Geolocation API for identifying the user's location, the Drag and Drop API for enabling drag and drop functionality, and the Canvas API for drawing graphics programmatically. These APIs are used to enhance web applications with modern, interactive features.",
+    "difficulty": "Easy"
+  },
+  {
+    "question": "How do you optimize an HTML page's load time?",
+    "answer": "Optimize an HTML page's load time by minimizing the size of images and other media files, compressing CSS and JavaScript files, reducing HTTP requests by combining files where possible, and using lazy loading for images and scripts that are not immediately necessary.",
+    "difficulty": "Easy"
+  },
+  {
+    "question": "What is the role of the <aside> tag in an HTML document?",
+    "answer": "The role of the <aside> tag in an HTML document is to define content aside from the content it is placed in, typically used for sidebars, call-out boxes, or content that is related to the main content but not integral to it.",
+    "difficulty": "Easy"
+  },
+  {
+    "question": "How do you create a navigation bar using HTML and CSS?",
+    "answer": "To create a navigation bar using HTML and CSS by using the <nav> element to define the navigation section and using <ul>, <li>, and <a> elements to create the menu items. CSS is used to style the navigation bar, including layout, colors, and hover effects.",
+    "difficulty": "Easy"
+  },
+  {
+    "question": "What are the differences between <blockquote> and <q> tags?",
+    "answer": "The <blockquote> is used for longer quotes that are block-level, often used with a citation using the cite attribute. The<q> is used for shorter, inline quotations.",
+    "difficulty": "Medium"
+  },
+  {
+    "question": "How do you use the <datalist> element in HTML5?",
+    "answer": "To use the <datalist> element in HTML5 by associating it with an <input> element. This provides a list of predefined options to the user as they type, facilitating an autocomplete feature.",
+    "difficulty": "Medium"
+  },
+  {
+    "question": "What is the purpose of the contenteditable attribute in HTML5?",
+    "answer": "The purpose of the contenteditable attribute in HTML5 is to specify editable elements on a webpage, allowing users to modify the content directly in the browser.",
+    "difficulty": "Medium"
+  },
+  {
+    "question": "How do you make an HTML element draggable?",
+    "answer": "To make an HTML element draggable by setting the draggable attribute to \"true\". This enables the element to be dragged and dropped with the mouse or other input devices.",
+    "difficulty": "Medium"
+  },
+  {
+    "question": "What is the difference between GET and POST methods in form submission?",
+    "answer": "The difference between GET and POST methods in form submission is that GET appends the form data to the URL, suitable for non-sensitive data and bookmarking, while POST sends the data as a request body, better for sensitive data as it does not display in the URL.",
+    "difficulty": "Easy"
+  },
+  {
+    "question": "How do you use the <output> element in HTML forms?",
+    "answer": "To use the <output> element in HTML forms to represent the result of a calculation or user action within the form, dynamically displaying outputs that depend on user input.",
+    "difficulty": "Medium"
+  },
+  {
+    "question": "What are microdata in HTML5, and how do you use them?",
+    "answer": "Microdata in HTML5 is used to add semantic markup to HTML content, allowing search engines and other applications to better understand the data and its context. You use microdata by adding specific attributes like itemscope, itemtype, and itemprop to HTML elements.",
+    "difficulty": "Medium"
+  },
+  {
+    "question": "How do you structure a multi-page website using HTML?",
+    "answer": "To structure a multi-page website using HTML by creating individual HTML files for each page, using consistent naming conventions, and linking between them with <a> tags. Organize content semantically using HTML5 elements to ensure a coherent structure across pages.",
+    "difficulty": "Easy"
+  },
+  {
+    "question": "What are the best practices for using headings in HTML?",
+    "answer": "The best practices for using headings in HTML involve starting with <h1> for the main title, followed by <h2> for main section titles, and so on, down to <h6> for sub-sections, ensuring a logical and hierarchical structure.",
+    "difficulty": "Easy"
+  },
+  {
+    "question": "How do you use the <figure> and <figcaption> elements in HTML?",
+    "answer": "To use the <figure> and <figcaption> elements in HTML to associate an image, diagram, or illustration with a caption. <figure> wraps the content, and <figcaption> provides the descriptive text, directly relating the two.",
+    "difficulty": "Easy"
+  },
+  {
+    "question": "What is the purpose of the <noscript> tag in HTML?",
+    "answer": "The purpose of the <noscript> tag in HTML is to define alternative content to be displayed in browsers that do not support JavaScript, or if JavaScript is disabled, ensuring the content remains accessible.",
+    "difficulty": "Medium"
+  },
+  {
+    "question": "How do you create a custom error page using HTML?",
+    "answer": "To create a custom error page using HTML by designing a standalone HTML document that provides users with helpful information and navigation options in the event of an error, such as a 404 Not Found error. Server configurations must then redirect error responses to this custom HTML page.",
+    "difficulty": "Easy"
+  },
+  {
+    "question": "How do you implement progressive enhancement in an HTML document?",
+    "answer": "To implement progressive enhancement in an HTML document by first ensuring that the core content and functionality are accessible to all users, regardless of their browser's capabilities. Then to enhance the website's functionality and style for browsers that support more advanced features.",
+    "difficulty": "Medium"
+  },
+  {
+    "question": "Can you explain the concept of shadow DOM and its usage?",
+    "answer": "The concept of shadow DOM refers to a web standard designed to encapsulate parts of a web component by hiding them in a separate shadow tree. This technique is used to prevent styles from leaking out of the component and maintain a modular design.",
+    "difficulty": "Medium"
+  },
+  {
+    "question": "What are custom elements in HTML, and how do you define them?",
+    "answer": "Custom elements in HTML are a feature that allows developers to create their tags with custom behavior and styling. You define them by using the customElements.define() method, which registers the new element and associates it with a class extending HTMLElement.",
+    "difficulty": "Easy"
+  },
+  {
+    "question": "How do you ensure an HTML page follows SEO best practices?",
+    "answer": "To ensure an HTML page follows SEO best practices by using semantic HTML5 elements, ensuring proper use of <title> and <meta> tags, optimizing loading times, creating a responsive design, and ensuring all content is accessible and crawlable by search engines.",
+    "difficulty": "Easy"
+  },
+  {
+    "question": "What is the role of ARIA roles and attributes in HTML?",
+    "answer": "The role of ARIA roles and attributes in HTML is to improve accessibility by providing extra context to assistive technologies about the purpose and behavior of web elements, especially those that do not convey this information semantically.",
+    "difficulty": "Easy"
+  },
+  {
+    "question": "How do you use the <template> tag in HTML5?",
+    "answer": "To use the <template> tag in HTML5 to define a block of HTML code that can be reused multiple times. The content inside a <template> tag is not rendered until it is activated and instantiated by JavaScript, allowing for dynamic content generation.",
+    "difficulty": "Easy"
+  },
+  {
+    "question": "What techniques do you use for optimizing HTML page rendering?",
+    "answer": "Techniques used for optimizing HTML page rendering include minimizing reflows and repaints by changing CSS properties efficiently, using efficient CSS selectors, minimizing DOM depth, and ensuring scripts are loaded asynchronously or deferred.",
+    "difficulty": "Easy"
+  },
+  {
+    "question": "How can you achieve internationalization and localization in HTML content?",
+    "answer": "To can achieve internationalization and localization in HTML content by using the lang attribute to specify the language of the page or parts thereof, using Unicode for character encoding, and providing translated content or using libraries to dynamically replace text based on user preferences.",
+    "difficulty": "Medium"
+  },
+  {
+    "question": "What are the security considerations when dealing with HTML and web content?",
+    "answer": "Security considerations when dealing with HTML and web content include sanitizing user input to prevent XSS attacks, using HTTPS to protect data in transit, implementing content security policies, and ensuring external resources are loaded securely.",
+    "difficulty": "Medium"
+  },
+  {
+    "question": "How do you use HTML in combination with SVG for graphics?",
+    "answer": "To use HTML in combination with SVG for graphics by embedding SVG directly into an HTML document using the <svg> tag. This allows for scalable vector graphics that can be styled with CSS and interacted with using JavaScript.",
+    "difficulty": "Medium"
+  },
+  {
+    "question": "What strategies do you employ for HTML email template design?",
+    "answer": "Strategies employed for HTML email template design include using tables for layout, inline CSS for styling, optimizing images for fast loading, ensuring responsiveness, and testing across various email clients to ensure compatibility.",
+    "difficulty": "Medium"
+  },
+  {
+    "question": "How do you implement offline functionality using HTML5?",
+    "answer": "To implement offline functionality using HTML5 by utilizing service workers to cache key resources and employing the Web Storage API or IndexedDB for storing data locally, allowing web applications to function without an internet connection.",
+    "difficulty": "Easy"
+  },
+  {
+    "question": "What is the significance of the rel attribute in link tags?",
+    "answer": "The significance of the rel attribute in link tags is to specify the relationship between the current document and the linked document or resource. It is used for defining stylesheets, preloading resources, and establishing links to authors or alternate versions of the document.",
+    "difficulty": "Easy"
+  },
+  {
+    "question": "How do you use HTML to enforce content security policies?",
+    "answer": "To use HTML to enforce content security policies by adding a <meta> tag in the <head> section of the document with the HTTP-equiv attribute set to Content-Security-Policy. This tag defines approved sources of content, helping to prevent XSS attacks and data injection.",
+    "difficulty": "Medium"
+  },
+  {
+    "question": "What are the best practices for structuring large-scale HTML applications?",
+    "answer": "Best practices for structuring large-scale HTML applications include using semantic HTML5 tags for clear structuring, employing a consistent naming convention for classes and IDs, modularizing components, and leveraging template and web component technologies for reusable elements.",
+    "difficulty": "Medium"
+  },
+  {
+    "question": "How can you make an HTML application SEO-friendly despite heavy JavaScript usage?",
+    "answer": "You can make an HTML application SEO-friendly despite heavy JavaScript usage by ensuring server-side rendering or static rendering of key content, using progressive enhancement techniques, and employing dynamic rendering for search engine crawlers when necessary.",
+    "difficulty": "Medium"
+  },
+  {
+    "question": "What is the importance of the <main> element in HTML5?",
+    "answer": "The importance of the <main> element in HTML5 lies in its role as the primary content container of a document. It is used to define the main content area that is directly related to or expands upon the central topic of a document, improving accessibility and search engine optimization.",
+    "difficulty": "Easy"
+  },
+  {
+    "question": "How do you handle responsive images in HTML5?",
+    "answer": "To handle responsive images in HTML5 using the <picture> element along with <source> elements specifying different image sources for various screen sizes and resolutions, and the srcset and sizes attributes in <img> tags to provide alternative images.",
+    "difficulty": "Medium"
+  },
+  {
+    "question": "What methods do you use to test the accessibility of an HTML document?",
+    "answer": "Methods to test the accessibility of an HTML document include using automated testing tools like axe or Lighthouse, manual testing with screen readers, keyboard-only navigation testing, and ensuring compliance with WCAG guidelines.",
+    "difficulty": "Medium"
+  },
+  {
+    "question": "How do you dynamically load HTML content into a page?",
+    "answer": "To dynamically load HTML content into a page using JavaScript, often with XMLHttpRequest or Fetch API to retrieve content from a server, and then insert that content into the DOM using methods like innerHTML or insertAdjacentHTML.",
+    "difficulty": "Easy"
+  },
+  {
+    "question": "What are service workers, and how do they interact with HTML content?",
+    "answer": "Service workers are scriptable network proxies in the browser that manage the web page or site's cache for offline use. They interact with HTML content by intercepting network requests and serving cached responses, enabling offline experiences and background syncs.",
+    "difficulty": "Medium"
+  },
+  {
+    "question": "Can you explain the use of preload and prefetch in HTML?",
+    "answer": "The use of preload in HTML is to specify resources that the page will need very soon after loading, which should be loaded early in the page's lifecycle. Prefetch is used for resources that might be needed in future navigations, loaded in idle time to improve performance on subsequent page loads.",
+    "difficulty": "Medium"
+  },
+  {
+    "question": "How do you manage the state in a single-page application using only HTML and JavaScript?",
+    "answer": "You manage state in a single-page application using only HTML and JavaScript by leveraging the browser's history API for navigation state, and storing application state in memory objects or using Web Storage for persistent state across sessions.",
+    "difficulty": "Medium"
+  },
+  {
+    "question": "What is the impact of HTTP/2 on HTML page loading and asset delivery?",
+    "answer": "The impact of HTTP/2 on HTML page loading and asset delivery includes faster loading times due to multiplexing, header compression, and server push features. These improvements allow multiple resources to be loaded in parallel over a single connection, reducing latency and improving performance.",
+    "difficulty": "Medium"
+  },
+  {
+    "question": "How do you use the <picture> element for responsive design?",
+    "answer": "You use the <picture> element for responsive design by defining multiple <source> elements within it, each with different srcset attributes targeting different screen resolutions or sizes. This allows the browser to select the most appropriate image to display based on the current viewport.",
+    "difficulty": "Easy"
+  },
+  {
+    "question": "What are the considerations for using HTML with IoT devices?",
+    "answer": "Considerations for using HTML with IoT devices include ensuring minimalistic, efficient coding due to hardware limitations, optimizing for low power consumption, and designing for varied display sizes and interaction models typical of IoT devices.",
+    "difficulty": "Medium"
+  },
+  {
+    "question": "How do you implement a content management system (CMS) using purely HTML?",
+    "answer": "Implementing a content management system (CMS) using purely HTML involves static site generators that compile templates and content into static HTML pages. These systems often use markdown files for content and provide a way to automatically rebuild the site when changes are made.",
+    "difficulty": "Easy"
+  },
+  {
+    "question": "What is AMP, and how does it relate to HTML?",
+    "answer": "AMP, or Accelerated Mobile Pages, is a web component framework and a website publishing technology developed by Google that aims to improve the performance of web content and advertisements. It relates to HTML by using a restricted set of HTML, JavaScript, and CSS functionalities to achieve faster page loading times on mobile devices.",
+    "difficulty": "Medium"
+  },
+  {
+    "question": "How do you ensure the ethical use of HTML and user data?",
+    "answer": "You ensure the ethical use of HTML and user data by designing web pages that respect user privacy, obtaining consent before collecting or storing personal data, following data protection regulations like GDPR, and being transparent about data use.",
+    "difficulty": "Medium"
+  },
+  {
+    "question": "What are the upcoming features or standards in HTML that developers should be aware of?",
+    "answer": "Upcoming features or standards in HTML that developers should be aware of include new form controls, enhanced accessibility features, further advancements in web components such as custom elements and shadow DOM, and ongoing improvements to HTML5 semantic elements for better document structure and web application development.",
+    "difficulty": "Medium"
+  },
+  {
+    "question": "How do you create a multi-level dropdown menu using HTML and CSS?",
+    "answer": "To create a multi-level dropdown menu using HTML and CSS by nesting <ul> elements within a parent <li> element and using CSS to control the visibility of the nested <ul> on hover or focus of the parent <li>.",
+    "difficulty": "Medium"
+  },
+  {
+    "question": "Write the HTML code to embed a YouTube video on a webpage.",
+    "answer": "To embed a YouTube video on a webpage, use the <iframe> tag with the src attribute set to the video's URL. For example:",
+    "difficulty": "Easy"
+  },
+  {
+    "question": "How would you structure an HTML form for user registration?",
+    "answer": "Structure an HTML form for user registration using the <form> element with <input> elements for user information such as name, email, password, and a submit button. Use <label> elements for accessibility and clarity:",
+    "difficulty": "Easy"
+  },
+  {
+    "question": "Provide an example of using HTML5 Canvas to draw a circle.",
+    "answer": "To draw a circle using HTML5 Canvas, use the <canvas> tag and JavaScript to access the canvas context and draw the circle:",
+    "difficulty": "Easy"
+  },
+  {
+    "question": "How do you implement a responsive navigation bar without JavaScript?",
+    "answer": "Implement a responsive navigation bar without JavaScript using HTML and CSS by employing media queries to adjust the layout and visibility of the navigation items based on the viewport size, and using the :checked pseudo-class for toggling the menu in mobile view with a hidden checkbox.",
+    "difficulty": "Easy"
+  },
+  {
+    "question": "Write an HTML snippet to display data in a grid layout using CSS Grid.",
+    "answer": "To display data in a grid layout using CSS Grid, use a container element with the display: grid; style and define columns and rows. Then, add child elements for each grid item:",
+    "difficulty": "Medium"
+  },
+  {
+    "question": "How do you mark up a block of text to use semantic HTML5 elements?",
+    "answer": "Mark up a block of text to use semantic HTML5 elements by using tags like <article> for independent content, <section> for sections within an article, <header> and <footer> for introductory and concluding content, and <aside> for tangentially related content:",
+    "difficulty": "Medium"
+  },
+  {
+    "question": "Create an HTML table with sortable columns using only HTML and CSS.",
+    "answer": "Creating an HTML table with sortable columns using only HTML and CSS directly is limited without JavaScript for interactivity. However, you can style the table headers to indicate they are sortable and use server-side or JavaScript-based sorting when the headers are clicked.",
+    "difficulty": "Medium"
+  },
+  {
+    "question": "How do you use the <audio> tag to include background music in a webpage?",
+    "answer": "You use the <audio> tag to include background music in a webpage by setting the src attribute to the music file's URL and the autoplay and loop attributes to play the music automatically and loop continuously:",
+    "difficulty": "Easy"
+  },
+  {
+    "question": "Demonstrate how to create a custom checkbox using HTML and CSS.",
+    "answer": "To create a custom checkbox using HTML and CSS, hide the default checkbox input with opacity: 0; and style the label with CSS to create a custom appearance. Use the :checked pseudo-class to style the checked state:",
+    "difficulty": "Easy"
+  }
+]

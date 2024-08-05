@@ -38,12 +38,12 @@ def generate_questions(data):
         next_question = run_llama3(contextual_prompt)
         
         if next_question :
-            item['category'] = next_question.capitalize()
+            item['topic'] = next_question.capitalize()
         else:
-            item['category'] = "Unknown"
+            item['topic'] = "Unknown"
         
         print(f"Classified question: {question}")
-        print(f"Difficulty: {item['category']}")
+        print(f"Difficulty: {item['topic']}")
         print("---")
         
         # Add a delay to avoid overwhelming the LLaMA model
@@ -52,7 +52,7 @@ def generate_questions(data):
 def main():
     parser = argparse.ArgumentParser(description="Classify questions in data.json using LLaMA 3 model")
     parser.add_argument("input_file", nargs='?', default="./questiongen_data.json", help="Input JSON file (default: questiongen_data.json)")
-    parser.add_argument("output_file", nargs='?', default="./final_data.json", help="Output JSON file (default: final_data.json)")
+    parser.add_argument("output_file", nargs='?', default="./js_final_data.json", help="Output JSON file (default: final_data.json)")
     
     args = parser.parse_args()
 

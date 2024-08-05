@@ -1,0 +1,614 @@
+[
+  {
+    "question": "What is JavaScript?",
+    "answer": "JavaScript is a high-level, interpreted scripting language primarily used for web development to create interactive and dynamic web pages. JavaScript runs in browsers and can be used server-side with environments like Node.js.",
+    "difficulty": "Medium",
+    "followup_question": "What are some key features of javascript that make it a popular choice for client-side scripting?"
+  },
+  {
+    "question": "How would you explain the difference between JavaScript and ECMAScript?",
+    "answer": "The difference between JavaScript and ECMAScript is that JavaScript is a general-purpose scripting language, while ECMAScript (often abbreviated as ES) is the standardized specification that defines its core features. Think of ECMAScript as the blueprint and JavaScript as one of the implementations of that blueprint.",
+    "difficulty": "Medium",
+    "followup_question": "What is the impact of ecmascript being a standard for scripting languages on its adoption and evolution in the web development ecosystem?"
+  },
+  {
+    "question": "How is JavaScript different from Java?",
+    "answer": "The difference between JavaScript and Java is that Java is an OOP programming language while JavaScript is an OOP scripting language. JavaScript is interpreted and follows dynamic typing. Java is compiled and strongly typed.",
+    "difficulty": "Easy",
+    "followup_question": "What are some key differences in syntax and functionality that contribute to their distinctiveness as programming languages?"
+  },
+  {
+    "question": "What are the primitive data types in JavaScript?",
+    "answer": "The primitive data types in JavaScript are string, number, boolean, undefined, null, symbol, Object, and BigInt.",
+    "difficulty": "Easy",
+    "followup_question": "What is the difference between the primitive data types in javascript and how are they used in variables and functions?"
+  },
+  {
+    "question": "How would you explain the concept of undefined in JavaScript?",
+    "answer": "Undefined in JavaScript is a primitive value automatically assigned to variables that have been declared but not yet initialized. It represents the absence of a defined value.",
+    "difficulty": "Medium",
+    "followup_question": "What are some common use cases for using the `undefined` value in a javascript application?"
+  },
+  {
+    "question": "What is null in JavaScript? ",
+    "answer": "Null in JavaScript is a special value that signifies no value or no object. It needs to be explicitly set and denotes the intentional absence of any value.",
+    "difficulty": "Easy",
+    "followup_question": "What are some common scenarios where null can occur in javascript?"
+  },
+  {
+    "question": "How can you differentiate null from undefined?",
+    "answer": "You can differentiate null from undefined as undefined is the default state of a declared variable that hasn't been assigned a value, whereas null is an explicit assignment indicating the deliberate absence of a value.",
+    "difficulty": "Easy",
+    "followup_question": "What is the difference in the behavior of a function when it encounters null versus undefined variables as arguments?"
+  },
+  {
+    "question": "What is NaN? How can you check if a value is NaN?",
+    "answer": "NaN stands for \"Not-a-Number\" and indicates a value that cannot be represented as a valid number. To check if a value is NaN, use the global function NaN() or the more reliable Number is NaN().",
+    "difficulty": "Medium",
+    "followup_question": "Is it possible to compare nan values directly in python, or do i need to use specialized functions like `math.isnan()`?"
+  },
+  {
+    "question": "Explain variable hoisting.",
+    "answer": "Variable Hoisting is a concept or behavior in JavaScript where variable and function declarations are moved to the top of their containing scope during the compilation phase.",
+    "difficulty": "Easy",
+    "followup_question": "What is an example of a situation where variable hoisting can lead to unexpected behavior in javascript?"
+  },
+  {
+    "question": "What is the difference between let, const, and var?",
+    "answer": "The difference between let, const, and var is that var declarations are globally scoped or function scoped while let and const are block scoped. var and let allows for reassignment, const creates a read-only reference, meaning the value it holds cannot be changed after declaration.",
+    "difficulty": "Easy",
+    "followup_question": "What are the scenarios where you would use let over const or var in javascript?"
+  },
+  {
+    "question": "What is an Immediately Invoked Function Expression (IIFE)?",
+    "answer": "An Immediately Invoked Function Expression (or IIFE) is a JavaScript function that is defined and executed immediately after its creation.",
+    "difficulty": "Medium",
+    "followup_question": "What is a common use case of an immediately invoked function expression (iife) in javascript?"
+  },
+  {
+    "question": "How can you explain closures in JavaScript?",
+    "answer": "Closures in JavaScript are functions which retains access to variables from its enclosing scope, even after that outer function has finished executing",
+    "difficulty": "Medium",
+    "followup_question": "What is the key concept behind lexical scope and how does it enable closures to capture their own scope?"
+  },
+  {
+    "question": "What is the this keyword? How does it work?",
+    "answer": "The this keyword in JavaScript refers to the current execution context or the object that the function is bound to. The value of this keyword changes if its call type is a method, constructor or a standalone function.",
+    "difficulty": "Easy",
+    "followup_question": "What is the scope of the `this` keyword in javascript, and how does it change when a function is called as a constructor or as a method?"
+  },
+  {
+    "question": "How does bind(), call(), and apply() work?",
+    "answer": "bind(), call(), and apply() are methods used to change the context of this keyword within a function. bind() creates a new function with a specified `this` value, while call() and apply() immediately invoke the function with the provided `this` value and arguments.",
+    "difficulty": "Medium",
+    "followup_question": "What are the key differences between these three methods in terms of their functionality, syntax, and use cases?"
+  },
+  {
+    "question": "What is the prototype chain?",
+    "answer": "The prototype chain is a mechanism that defines how objects inherit properties and methods from their prototype objects. JavaScript looks up the prototype chain to find it in higher-level prototypes, when a property or method is not found on an object.",
+    "difficulty": "Medium",
+    "followup_question": "What are some common issues or challenges that can occur when dealing with a long or complex prototype chain in javascript?"
+  },
+  {
+    "question": "How can you explain event delegation?",
+    "answer": "Event delegation is a method where a single event handler is placed on a common parent element of multiple child elements. The parent element captures and handles events triggered by the child elements.",
+    "difficulty": "Medium",
+    "followup_question": "What is an example of a scenario where event delegation would be beneficial over traditional event handling?"
+  },
+  {
+    "question": "What are JavaScript Promises?",
+    "answer": "JavaScript Promises are objects representing the eventual completion or failure of an asynchronous operation. Promises in JavaScript provide a cleaner and more structured way to handle asynchronous code compared to callback functions, making it easier to work with asynchronous tasks like HTTP requests.",
+    "difficulty": "Medium",
+    "followup_question": "What is the difference between `promise.resolve()` and `new promise((resolve, reject) => ...)` in terms of their usage scenarios?"
+  },
+  {
+    "question": "How do you handle errors in JavaScript?",
+    "answer": "Use try-catch block to handle errors in JavaScript. Errors are thrown explicitly using the throw statement. The try statement is used to define a code block to be executed. The catch statement defines a code block that handles any errors that occur during execution. The finally block defines a code block that should always be executed, regardless of the outcome of the try statement. The throw statement can be used to define a custom error caught and handled by the catch statement.",
+    "difficulty": "Medium",
+    "followup_question": "How do you implement error handling and debugging techniques, such as try-catch blocks, console logs, and error messages, to effectively troubleshoot and resolve issues in your code?"
+  },
+  {
+    "question": "How does the Event Loop work in JavaScript?",
+    "answer": "Event Loop in JavaScript continuously checks the call stack for executed functions and the message queue for events or tasks to process ensuring that JavaScript remains single-threaded while handling asynchronous operations efficiently.",
+    "difficulty": "Medium",
+    "followup_question": "What is the main difference between a traditional loop and an event loop in javascript, and how do events get processed in this context?"
+  },
+  {
+    "question": "What is the difference between == and ===?",
+    "answer": "The difference between == and === in JavaScript is that == is a loose equality operator that compares values after type coercion, while === is a strict equality operator that compares both values and types. === requires both values to be of the same type and have the same value, making it a safer choice for most comparisons to avoid unexpected type conversions.",
+    "difficulty": "Medium",
+    "followup_question": "What happens when using === in a conditional statement where the values being compared are objects?"
+  },
+  {
+    "question": "How can you explain the importance of the use strict directive?",
+    "answer": "The importance of use strict directive is that it enforces a stricter set of rules and helps catch common coding mistakes. It prevents the use of undeclared variables, eliminates ambiguous behavior, and encourages a cleaner, more reliable codebase.",
+    "difficulty": "Easy",
+    "followup_question": "What are some common pitfalls or security vulnerabilities that can arise when not using the \"use strict\" directive in javascript code, and how does it relate to best practices for writing robust and maintainable code?"
+  },
+  {
+    "question": "How would you explain the concept of Callback Hell or Pyramid of Doom?",
+    "answer": "Callback Hell, or Pyramid of Doom, occurs when multiple nested callback functions are used in asynchronous JavaScript code, leading to deeply indented and hard-to-read code structures making code maintenance and debugging challenging.",
+    "difficulty": "Medium",
+    "followup_question": "What is an example of a real-world scenario where using callbacks leads to callback hell, and how did you refactor that code to make it more readable and maintainable?"
+  },
+  {
+    "question": "How do you avoid Callback Hell?",
+    "answer": "To avoid callback Hell use Promises, async/await, or modularize the code into smaller functions.",
+    "difficulty": "Easy",
+    "followup_question": "How do you handle situations where multiple callbacks are needed to achieve a specific functionality, without introducing unnecessary complexity and maintainability issues?"
+  },
+  {
+    "question": "What is a callback function?",
+    "answer": "A callback function is a function passed as an argument to another function, which is then invoked or executed at a later point in the program's execution.",
+    "difficulty": "Easy",
+    "followup_question": "What is the difference between a traditional callback function and an arrow function used as a callback in javascript?"
+  },
+  {
+    "question": "Can you explain how map, reduce, and filter methods work?",
+    "answer": "map(), reduce(), and filter() are array methods in JavaScript. map() transforms each element in an array into a new array based on a provided function. reduce() reduces an array to a single value by applying a function cumulatively to elements. filter() creates a new array with elements that pass a given test.",
+    "difficulty": "Easy",
+    "followup_question": "What are some common use cases for map, reduce, and filter in data processing pipelines?"
+  },
+  {
+    "question": "What is a closure? Can you give a practical example?",
+    "answer": "Closure in JavaScript is when a function retains access to variables from its enclosing scope, even after that outer function has finished executing. Practical examples include creating private variables and functions in JavaScript, maintaining state in event handlers, and implementing data hiding patterns.",
+    "difficulty": "Easy",
+    "followup_question": "What is the difference between a lexical scope and a dynamic scope in a closure?"
+  },
+  {
+    "question": "How do you clone an object in JavaScript?",
+    "answer": "To clone an object in JavaScript use methods like Object.assign(), the spread operator (...), or by create a custom cloning functions.",
+    "difficulty": "Medium",
+    "followup_question": "How do you handle the prototype chain when cloning an object in javascript?"
+  },
+  {
+    "question": "Can you explain how to create and use JavaScript Promises?",
+    "answer": "To create a Promise, use the Promise constructor with two parameters: resolve and reject. Then use .then() and .catch() to handle successful and failed outcomes, respectively.",
+    "difficulty": "Medium",
+    "followup_question": "How do you handle promise rejections, and what is the best way to chain multiple promises together in a javascript application?"
+  },
+  {
+    "question": "How does JavaScript handle asynchronous operations?",
+    "answer": "JavaScript handles asynchronous operations using mechanisms like callbacks, Promises, async/await, and the Event Loop.",
+    "difficulty": "Easy",
+    "followup_question": "How does javascript's callback-based approach to handling asynchronous operations differ from the promise-based approach introduced in ecmascript 2015?"
+  },
+  {
+    "question": "What distinguishes a function expression from a function declaration?",
+    "answer": "A function expression is distinguished from a function declaration as function declaration defines a named function with a specific name and is hoisted to the top of its containing scope. A function expression assigns an anonymous or named function to a variable, and it is not hoisted.",
+    "difficulty": "Easy",
+    "followup_question": "What are the main differences in terms of syntax and usage between a function expression and a function declaration?"
+  },
+  {
+    "question": "How can you explain the Document Object Model (DOM)?",
+    "answer": "The Document Object Model (DOM) is a programming interface and representation of structured documents. It represents a web page's structure as a tree of objects, where each object corresponds to a part of the page, such as an element or an attribute.",
+    "difficulty": "Medium",
+    "followup_question": "What are the key components of a dom tree, and how does it enable dynamic manipulation of an html document?"
+  },
+  {
+    "question": "How do you select an element in the DOM?",
+    "answer": "To select an element in the DOM use methods like document.getElementById(), document.querySelector(), or document.getElementsByClassName(), depending on the selection criteria.",
+    "difficulty": "Medium",
+    "followup_question": "How would you handle a situation where multiple elements match the selection criteria, and what approach would you use to ensure the correct element is selected?"
+  },
+  {
+    "question": "What is the difference between innerHTML and textContent?",
+    "answer": "The difference between innerHTML and textContent is that innerHTML retrieves or sets the HTML content within an element, while textContent retrieves or sets only the text content, excluding any HTML tags.",
+    "difficulty": "Easy",
+    "followup_question": "What scenarios would you use each of these properties for, and how do their differences impact your approach to dom manipulation?"
+  },
+  {
+    "question": "How do you add or remove a class from an element in the DOM?",
+    "answer": "To add a class using the element.classList.add('classname') method and remove it using the element.classList.remove('classname') method.",
+    "difficulty": "Easy",
+    "followup_question": "How would you ensure that the added or removed class affects all instances of the element, if there are multiple elements with the same class on the page?"
+  },
+  {
+    "question": "How would you explain event bubbling and event capturing?",
+    "answer": "Event bubbling and event capturing are two phases of event propagation in the DOM. In event bubbling, the event starts from the target element that triggered the event and bubbles up to the root of the DOM. In event capturing, the process is reversed and the event descends from the root to the target element.",
+    "difficulty": "Medium",
+    "followup_question": "What are the key differences between event bubbling and event capturing in terms of the order in which they process events?"
+  },
+  {
+    "question": "What is the purpose of the data-* attribute?",
+    "answer": "The data-* attribute allows to storage of custom data on an element, providing a way to store extra information that doesn't have any visual representation.",
+    "difficulty": "Easy",
+    "followup_question": "What is the typical use case for html attributes that start with `data-`?"
+  },
+  {
+    "question": "How do you create a new element and add it to the DOM?",
+    "answer": "To create a new element and add it to the DOM, use the document.createElement('elementName') method. Use the parentNode.appendChild(newElement) method after setting its properties.",
+    "difficulty": "Easy",
+    "followup_question": "How would you ensure that the newly added element is properly styled and laid out on the page, considering css and layout constraints?"
+  },
+  {
+    "question": "How do you attach an event handler to a DOM element?",
+    "answer": "To attach an event handler to a DOM element use the element.addEventListener('eventname', handlerFunction) method.",
+    "difficulty": "Easy",
+    "followup_question": "How do you handle events that bubble up to parent elements when attaching an event handler to a dom element?"
+  },
+  {
+    "question": "How can you prevent the default behavior in an event handler?",
+    "answer": "To prevent the default behavior in an event handler use the event.preventDefault() method within the handler function.",
+    "difficulty": "Medium",
+    "followup_question": "What is the significance of preventing default behavior in an event handler, and how does it impact the overall program flow?"
+  },
+  {
+    "question": "How would you explain the importance of document.ready in jQuery?",
+    "answer": "document.ready in jQuery ensures that the DOM is fully loaded and ready for manipulation. It guarantees that scripts run only after the entire page's elements are available, preventing potential errors or unexpected behaviors.",
+    "difficulty": "Easy",
+    "followup_question": "What are some common pitfalls or misunderstandings about the use of document.ready in jquery, and how can developers avoid them?"
+  },
+  {
+    "question": "Can you explain the concept of shadow DOM?",
+    "answer": "The shadow DOM enables web developers to encapsulate their code by attaching separate DOM trees to specific elements. This mechanism isolates the internal structure, composition, and styling of these elements from the main document, ensuring functional and styling independence. It becomes easier to manage and maintain the code, by keeping them hidden from the rest of the document.",
+    "difficulty": "Easy",
+    "followup_question": "What is the primary difference between shadow dom and the traditional document object model (dom) in a web page?"
+  },
+  {
+    "question": "What is a JavaScript generator and how is it different from a regular function?",
+    "answer": "a JavaScript generator is a special type of function that can pause its execution and later resume from where it left off. Regular functions run to completion when invoked and generators produce a sequence of values using the yield keyword and are controlled by the next() method.",
+    "difficulty": "Medium",
+    "followup_question": "What are some common use cases of javascript generators that distinguish them from regular functions in terms of their execution behavior or design patterns?"
+  },
+  {
+    "question": "What is a Proxy in JavaScript?",
+    "answer": "A Proxy in JavaScript is an object that wraps another object (target) and intercepts operations, like reading or writing properties, offering a way to customize default behaviors.",
+    "difficulty": "Medium",
+    "followup_question": "What are some common use cases of proxies in javascript, and how do they differ from other types of objects such as wrappers or adapters?"
+  },
+  {
+    "question": "How does JavaScript\u2019s async and await work?",
+    "answer": "An asynchronous function in JavaScript returns a promise. The await keyword can be used inside the function to pause its execution until the promise settles, simplifying the flow of asynchronous code.",
+    "difficulty": "Medium",
+    "followup_question": "How do you handle errors and exceptions when using async/await in javascript?"
+  },
+  {
+    "question": "Can you explain JavaScript\u2019s Module pattern?",
+    "answer": "JavaScript\u2019s Module pattern provides a way to create private scopes and expose only chosen parts to the external world. It's a design pattern that utilizes closures to encapsulate functionality, allowing for public and private access levels.",
+    "difficulty": "Medium",
+    "followup_question": "What is the purpose of using the revealing module pattern in javascript, and how does it differ from other common module patterns such as the singleton or factory patterns?"
+  },
+  {
+    "question": "What is a Service Worker and what is it used for?",
+    "answer": "A Service Worker is a script running in the background of a browser, separate from the web page. A Service Worker is used for caching resources, enabling offline capabilities, and intercepting network requests to enhance performance and user experience.",
+    "difficulty": "Medium",
+    "followup_question": "What are some common use cases for service workers in modern web applications, such as caching data or handling offline requests?"
+  },
+  {
+    "question": "What is a Web Worker?",
+    "answer": "A Web Worker is a script executed in the background, on a separate thread from the main execution thread. A Web Worker ensures long-running tasks don't block the main thread, keeping web applications responsive.",
+    "difficulty": "Easy",
+    "followup_question": "What are the key benefits of using web workers in modern web development?"
+  },
+  {
+    "question": "How can you explain the concept of memoization?",
+    "answer": "Memoization in JavaScript is an optimization technique that stores the results of expensive function calls and returns the cached result when the same inputs reoccur thus reducing the computational time.",
+    "difficulty": "Medium",
+    "followup_question": "What are some common scenarios where memoization is particularly effective in optimizing code performance?"
+  },
+  {
+    "question": "How do you handle state management in large applications?",
+    "answer": "Large applications handle state management using centralized state management solutions such as Redux, Vuex, or MobX. These libraries offer a structured and predictable method for managing and updating state across components.",
+    "difficulty": "Medium",
+    "followup_question": "How do you ensure consistency and scalability when using a state management solution across multiple micro-frontends or complex page layouts?"
+  },
+  {
+    "question": "What are the advantages and disadvantages of using JavaScript frameworks/libraries like React or Angular?",
+    "answer": "Using JavaScript frameworks/libraries like React or Angular provides advantages such as rapid development, reusable components, and robust ecosystems. The main disadvantages include steep learning curves, potential overengineering, and increased initial load times due to library overheads.",
+    "difficulty": "Medium",
+    "followup_question": "What specific scenarios would you recommend using one framework over the other, considering factors such as project complexity, team experience, and required functionality?"
+  },
+  {
+    "question": "What are template literals in ES6?",
+    "answer": "Template literals in ES6 are string literals allowing embedded expressions. They utilize backticks ( ) instead of quotes and can span multiple lines, making string interpolation more intuitive.",
+    "difficulty": "Easy",
+    "followup_question": "What is the primary advantage of using template literals over traditional string concatenation methods?"
+  },
+  {
+    "question": "Can you explain the spread and rest operators?",
+    "answer": "The spread operator (...) expands an array or object into its elements or properties. The rest operator, also represented by ..., collects the remaining elements or properties into an array or object.",
+    "difficulty": "Medium",
+    "followup_question": "What is the difference between the `spread` operator and the `rest` operator in functional programming?"
+  },
+  {
+    "question": "What are arrow functions? How are they different from regular functions?",
+    "answer": "Arrow functions are a concise way to write functions in ES6. Arrow functions differ from regular functions in syntax and behavior, particularly in their handling of the this keyword, which arrow functions do not bind.",
+    "difficulty": "Easy",
+    "followup_question": "What is a use case scenario where using an arrow function would make sense and how does its concise syntax affect the readability of the code?"
+  },
+  {
+    "question": "How can you explain destructuring assignment?",
+    "answer": "Destructuring assignment in ES6 allows unpacking values from arrays or properties from objects into distinct variables, simplifying the extraction of multiple properties or values.",
+    "difficulty": "Medium",
+    "followup_question": "How does destructuring assignment differ from object rest in javascript?"
+  },
+  {
+    "question": "What are default parameters in ES6?",
+    "answer": "Default parameters in ES6 allow functions to have predefined values for arguments that are not passed, ensuring the function behaves correctly even if some parameters are missing.",
+    "difficulty": "Medium",
+    "followup_question": "What is the difference between `use strict` and `use strict mode only` in es6?"
+  },
+  {
+    "question": "How would you explain the import and export statements in ES6 modules?",
+    "answer": "The import and export statements in ES6 modules facilitate modular programming by allowing developers to split code into multiple files and then import or export functionalities as required.",
+    "difficulty": "Easy",
+    "followup_question": "How do the `import` and `export` statements affect the tree-shaking optimization process in a production build of an es6 module?"
+  },
+  {
+    "question": "What are JavaScript Symbols?",
+    "answer": "JavaScript Symbols are unique and immutable data types introduced in ES6. They often serve as object property keys to ensure uniqueness and avoid overwriting existing properties.",
+    "difficulty": "Medium",
+    "followup_question": "What is the difference between a symbol and an object in javascript, and when would you choose to use each?"
+  },
+  {
+    "question": "What is the concept of iteration in ES6?",
+    "answer": "Iteration in ES6 is a new mechanism for traversing over data. New constructs like the for...of loop, are used to seamlessly iterable objects, such as arrays, strings, maps, and sets, providing a more intuitive way to loop through items.",
+    "difficulty": "Medium",
+    "followup_question": "What is an example of using iteration in a javascript program, and how does it improve code readability and maintainability?"
+  },
+  {
+    "question": "What are JavaScript Sets and Maps?",
+    "answer": "JavaScript Sets are collections of values where each value must be unique. JavaScript Maps are collections of key-value pairs where keys can be any type. Both of these collections are introduced in ES6 to supplement traditional objects and arrays.",
+    "difficulty": "Medium",
+    "followup_question": "What is the difference between `set` and `map` in terms of their use cases?"
+  },
+  {
+    "question": "What is async functions in ES2017?",
+    "answer": "Async functions are an enhancement to promises, allowing to write asynchronous code in a more synchronous-like fashion using the async and await keywords.",
+    "difficulty": "Medium",
+    "followup_question": "How does async/await syntax work internally, and what are its implications for error handling and debugging?"
+  },
+  {
+    "question": "What is the Virtual DOM in React?",
+    "answer": "The Virtual DOM in React is a lightweight representation of the actual DOM. Virtual DOM enables efficient updates and rendering by minimizing direct interactions with the actual DOM.",
+    "difficulty": "Medium",
+    "followup_question": "What are some key differences between the virtual dom and the real dom in react?"
+  },
+  {
+    "question": "How can you explain the difference between state and props in React?",
+    "answer": "The difference between state and props is that the state in React represents the internal data of a component that can change over time. Props are immutable data passed from parent to child components.",
+    "difficulty": "Medium",
+    "followup_question": "How do you decide when to use state vs props in a react component, considering factors such as component hierarchy, data flow, and re-rendering implications?"
+  },
+  {
+    "question": "How does Angular\u2019s two-way data binding work?",
+    "answer": "Angular's two-way data binding automatically synchronizes the model and the view. When the model changes, the view reflects the change, and vice versa, without additional code to detect and respond to these changes.",
+    "difficulty": "Medium",
+    "followup_question": "How is angular's two-way data binding implemented in terms of change detection and property updating?"
+  },
+  {
+    "question": "What is the difference between Angular and React?",
+    "answer": "The difference between Angular and React is that Angular is a full-fledged framework offering a wide array of built-in tools and features, while React is a library primarily focused on building user interfaces. They have different philosophies, such as Angular using two-way data binding and React opting for one-way data flow.",
+    "difficulty": "Medium",
+    "followup_question": "What are some key features that contribute to this difference, such as the way they handle state management or template rendering?"
+  },
+  {
+    "question": "How can you explain the concept of a hook in React?",
+    "answer": "A hook in React is a function that lets you tap into React features, like state and lifecycle methods, from function components, making them more versatile without converting them to class components.",
+    "difficulty": "Easy",
+    "followup_question": "What is the purpose of using a hook like `useeffect` or `usestate` in react, and how does it differ from a regular javascript function?"
+  },
+  {
+    "question": "How do you handle state management in React?",
+    "answer": "React handles state management using component local state, context, or third-party libraries like Redux or MobX, depending on the application's complexity and requirements.",
+    "difficulty": "Medium",
+    "followup_question": "What library or approach do you typically use for managing application state, and how do you ensure that it's properly updated and synced across different components and routes?"
+  },
+  {
+    "question": "What is Vue.js and how is it different from React and Angular?",
+    "answer": "Vue.js is different from Angular and React as Vue.js is a progressive JavaScript framework for building user interfaces. Unlike React, which is a library, and Angular, a comprehensive framework, Vue offers a middle ground with an easier learning curve, combined with a flexible and modular approach.",
+    "difficulty": "Medium",
+    "followup_question": "What are some key features of vue.js that differentiate it from react and angular, such as its reactivity system, template syntax, or component architecture?"
+  },
+  {
+    "question": "How would you explain the concept of a service in Angular?",
+    "answer": "A service in Angular is a class that provides reusable data or functionalities across the application. It is used for tasks like HTTP requests, logging, or data sharing between components.",
+    "difficulty": "Easy",
+    "followup_question": "What are some common use cases where using a service in angular can improve the maintainability and reusability of your code?"
+  },
+  {
+    "question": "What is Redux and how does it work?",
+    "answer": "Redux is a predictable state management library for JavaScript applications. Redux maintains application state in a single immutable object, with changes made through pure functions called reducers, ensuring a consistent and centralized data flow.",
+    "difficulty": "Medium",
+    "followup_question": "What are some common use cases for redux in a react application, and how does it help manage state changes?"
+  },
+  {
+    "question": "What is the purpose of a reducer in Redux?",
+    "answer": "A reducer in Redux is a pure function that takes the current state and an action, then returns a new state. It defines how the application's state changes in response to actions dispatched to the store.",
+    "difficulty": "Medium",
+    "followup_question": "What does the reducer function return, and how does it affect the store state in redux?"
+  },
+  {
+    "question": "How can you explain the concept of the Critical Rendering Path?",
+    "answer": "The Critical Rendering Path is the sequence of steps browsers undergo to convert HTML, CSS, and JavaScript into pixels rendered on the screen. Optimizing this path ensures web pages render quickly and responsively.",
+    "difficulty": "Medium",
+    "followup_question": "What are the key components that make up a well-optimized critical rendering path in terms of reducing latency and improving overall user experience?"
+  },
+  {
+    "question": "What are the different ways to include JavaScript in HTML?",
+    "answer": "JavaScript is included in HTML using the <script> tag either inline, by placing code directly between the tags, or externally, by linking to an external .js file using the src attribute.",
+    "difficulty": "Medium",
+    "followup_question": "What are some common scenarios where javascript is included in html using the `<script>` tag, and how does it differ from including javascript files using a `<script src>` attribute?"
+  },
+  {
+    "question": "What are Progressive Web Apps (PWAs)?",
+    "answer": "Progressive Web Apps (PWAs) are web applications that offer native-app-like experiences with features like offline access, push notifications, and installation on the home screen, while still being accessible via browsers.",
+    "difficulty": "Medium",
+    "followup_question": "What are some of the key benefits and use cases of progressive web apps (pwas) that make them a popular choice for modern web development?"
+  },
+  {
+    "question": "How can the performance of a JavaScript application be improved?",
+    "answer": "Performance of a JavaScript application is improved by optimizing code, minimizing DOM interactions, leveraging browser caching, deferring non-critical JavaScript, and using Webpack tool for bundling and minification.",
+    "difficulty": "Medium",
+    "followup_question": "What are some specific techniques or tools that you would recommend to optimize the performance of a javascript application, such as code splitting, lazy loading, or using a bundler like webpack?"
+  },
+  {
+    "question": "How can you explain the concept of Lazy Loading?",
+    "answer": "Lazy Loading is a performance optimization technique where specific assets, like images or scripts, are loaded only when needed or when they appear in the viewport, reducing initial load times.",
+    "difficulty": "Easy",
+    "followup_question": "What is the primary advantage of using lazy loading in web development, and how does it impact the overall performance of a website?"
+  },
+  {
+    "question": "How do you ensure that your JavaScript code is cross-browser compatible?",
+    "answer": "Ensuring cross-browser compatibility involves using feature detection, leveraging Babel for transpilation, and testing the code across various browsers and browser versions.",
+    "difficulty": "Easy",
+    "followup_question": "What specific steps do you take to test and validate the compatibility of your javascript code across different browsers, versions, and platforms?"
+  },
+  {
+    "question": "How do you debug JavaScript code?",
+    "answer": "JavaScript code is debugged using browser developer tools, setting breakpoints, inspecting variables, and utilizing console.log() statements or more advanced methods like profiling and monitoring.",
+    "difficulty": "Medium",
+    "followup_question": "What are some common pitfalls and gotchas in javascript that can make debugging more challenging, and how would you approach them?"
+  },
+  {
+    "question": "What are the common performance bottlenecks in JavaScript applications?",
+    "answer": "Common performance bottlenecks include extensive DOM manipulations, memory leaks, unoptimized images, synchronous blocking calls, and redundant or unused code.",
+    "difficulty": "Medium",
+    "followup_question": "What are some best practices to optimize these bottlenecks and improve the overall performance of a javascript application?"
+  },
+  {
+    "question": "What is the importance of Webpack in modern web development?",
+    "answer": "Webpack is vital in modern web development as it's a module bundler and task runner. Webpack bundles JavaScript files, stylesheets, images, and other assets into a single package, optimizing and transforming them for optimal performance.",
+    "difficulty": "Easy",
+    "followup_question": "How does webpack's module bundling and tree shaking feature impact the overall performance and scalability of a web application?"
+  },
+  {
+    "question": "How can you explain the concept of tree shaking?",
+    "answer": "Tree shaking is an optimization technique used in module bundling, where dead code, or unused modules, are eliminated from the final bundled file, resulting in smaller and more efficient output.",
+    "difficulty": "Easy",
+    "followup_question": "What is the primary goal of tree shaking in a react application, and how does it impact the performance and security of the code?"
+  },
+  {
+    "question": "What is unit testing in JavaScript?",
+    "answer": "Unit testing in JavaScript involves testing individual units or components of code in isolation to ensure that each part functions as intended.",
+    "difficulty": "Easy",
+    "followup_question": "What are some popular libraries or frameworks used for unit testing in javascript?"
+  },
+  {
+    "question": "How do you perform testing in JavaScript?",
+    "answer": "Testing in JavaScript is performed using testing libraries or frameworks, writing test cases, and then running these tests to verify code correctness.",
+    "difficulty": "Medium",
+    "followup_question": "What are some common testing frameworks and libraries used in javascript, such as jest or mocha, and how do you integrate them into your project?"
+  },
+  {
+    "question": "What are some JavaScript testing libraries/frameworks?",
+    "answer": "Popular JavaScript testing libraries/frameworks are Jasmine, Jest, Mocha, Chai, and Karma.",
+    "difficulty": "Medium",
+    "followup_question": "What is mocha, and how does it differ from other popular javascript testing frameworks like jest or cypress?"
+  },
+  {
+    "question": "What is Test-Driven Development (TDD)?",
+    "answer": "Test-Driven Development (TDD) is a software development methodology where tests are written before the actual code, ensuring that code is developed with testing in mind and meets defined requirements.",
+    "difficulty": "Easy",
+    "followup_question": "How does tdd ensure that your code is reliable and maintainable?"
+  },
+  {
+    "question": "Explain the concept of mocking in testing?",
+    "answer": "Mocking in testing involves creating mock objects or functions to replicate and control the behavior of real objects, enabling isolated testing of specific parts without actual dependencies.",
+    "difficulty": "Medium",
+    "followup_question": "What are some common scenarios where mocking is particularly useful, and how do developers typically implement mocking in their tests?"
+  },
+  {
+    "question": "What is the difference between end-to-end testing and unit testing?",
+    "answer": "The difference between end-to-end testing and unit testing is that end-to-end testing evaluates the entire application's flow in a real-world scenario, while unit testing focuses on individual components in isolation.",
+    "difficulty": "Medium",
+    "followup_question": "What is an example of a scenario where end-to-end testing would be more beneficial compared to unit testing?"
+  },
+  {
+    "question": "What is the importance of code linting?",
+    "answer": "Code linting is crucial for maintaining code quality, as it detects and warns about stylistic errors, potential bugs, and deviations from coding standards.",
+    "difficulty": "Medium",
+    "followup_question": "What are some common coding practices or best practices that can help in identifying potential issues in code before running it through a linter?"
+  },
+  {
+    "question": "How do you ensure that your JavaScript code follows coding standards?",
+    "answer": "Ensuring JavaScript code adheres to coding standards involves using tools like ESLint or TSLint, setting up custom rules, and integrating them into the development process.",
+    "difficulty": "Medium",
+    "followup_question": "How do you implement and enforce a consistent style guide across a large javascript project or team, and what tools or processes do you use to maintain consistency?"
+  },
+  {
+    "question": "What is the importance of Continuous Integration (CI) and Continuous Deployment (CD) in software development?",
+    "answer": "Continuous Integration (CI) and Continuous Deployment (CD) are vital for ensuring code consistency, automating testing, and speeding up the delivery of software updates or features to end users.",
+    "difficulty": "Easy",
+    "followup_question": "What are some best practices for implementing ci and cd pipelines in a large-scale enterprise environment, considering factors such as scalability, maintainability, and compliance with regulatory requirements?"
+  },
+  {
+    "question": "What are the key principles of writing clean code?",
+    "answer": "Key principles of writing clean code are writing readable and understandable code, keeping functions and modules short, using meaningful names, avoiding code duplication, and adhering to the Single Responsibility Principle.",
+    "difficulty": "Medium",
+    "followup_question": "What specific coding practices or design patterns do you use to ensure your code is maintainable, efficient, and easy to read for others (and yourself) in the long run?"
+  },
+  {
+    "question": "Write a function to reverse a string.",
+    "answer": "Use the built-in JavaScript methods, to reverse a string.",
+    "difficulty": "Medium",
+    "followup_question": "How would you handle cases where the input string contains spaces or special characters?"
+  },
+  {
+    "question": "How would you find the first non-repeating character in a string?",
+    "answer": "Iterate through the string and use a frequency counter.",
+    "difficulty": "Medium",
+    "followup_question": "What is the average time complexity of your solution?"
+  },
+  {
+    "question": "How can you write a function to determine if a string is a palindrome?",
+    "answer": "A string is a palindrome if it reads the same backward as forward.",
+    "difficulty": "Easy",
+    "followup_question": "Is there a specific approach or algorithm you would like me to use to solve this problem, such as using recursion or iterating through the string?"
+  },
+  {
+    "question": "How would you merge two sorted arrays?",
+    "answer": "Use a two-pointer technique to merge sorted arrays.",
+    "difficulty": "Medium",
+    "followup_question": "What are the time complexities of your proposed merging algorithm and how does it compare to existing solutions like merge sort or binary search?"
+  },
+  {
+    "question": "How to write a function to implement a debounce?",
+    "answer": "Debounce ensures a function doesn't fire too frequently.",
+    "difficulty": "Medium",
+    "followup_question": "What is the ideal duration of the timer in milliseconds that would allow for efficient debouncing while still allowing for sufficient user feedback?"
+  },
+  {
+    "question": "How to implement a basic version of Promise?",
+    "answer": "A basic Promise implementation involves resolve and reject functions.",
+    "difficulty": "Easy",
+    "followup_question": "How would you handle the rejection and resolution mechanisms in your implementation of a basic promise?"
+  },
+  {
+    "question": "How to write a function to deep clone an object?",
+    "answer": "You can use recursion to deep clone objects.",
+    "difficulty": "Medium",
+    "followup_question": "How would you handle cyclic references while cloning the object, and are there any specific libraries or frameworks that can simplify this process?"
+  },
+  {
+    "question": "How to implement a function to perform a binary search on a sorted array?",
+    "answer": "Binary search halves the search interval with each step.",
+    "difficulty": "Medium",
+    "followup_question": "What are the key steps and edge cases i should consider when implementing the binary search algorithm to ensure its correctness and efficiency?"
+  },
+  {
+    "question": "How would you implement a basic pub-sub system?",
+    "answer": "A pub-sub system involves subscribing to events and publishing them.",
+    "difficulty": "Medium",
+    "followup_question": "How would you handle subscriptions and unsubscriptions in your implementation, and what kind of data structures or algorithms would you use to efficiently manage the publishers and subscribers?"
+  },
+  {
+    "question": "How can you write a function to calculate the Fibonacci sequence?",
+    "answer": "A recursive approach to compute Fibonacci.",
+    "difficulty": "Medium",
+    "followup_question": "What is the time complexity of your proposed solution for calculating the fibonacci sequence?"
+  },
+  {
+    "question": "Can a JavaScript Developer Work Remotely?",
+    "answer": "Yes, a JavaScript developer can work remotely. With the ubiquity of online collaboration tools, cloud platforms, and version control systems like Git, JavaScript developers can efficiently collaborate, code, and deploy applications from anywhere in the world. The nature of web development, combined with the digital tools available, makes remote work a viable and often preferred option for many JavaScript developers.",
+    "difficulty": "Medium",
+    "followup_question": "How would you ensure remote collaboration and communication with team members and stakeholders if you were to work remotely as a javascript developer?"
+  },
+  {
+    "question": "Do JavaScript Developers Need Continuous Learning?",
+    "answer": "Yes, JavaScript developers need continuous learning. The world of web development, and particularly JavaScript, is dynamic and rapidly evolving. New frameworks, tools, and best practices emerge regularly. JavaScript developers must stay updated with the latest advancements, adopt new methodologies, and continuously hone their skills, to remain relevant and efficient. This ongoing learning ensures they deliver optimal solutions and keep pace with the ever-changing landscape of web technology.",
+    "difficulty": "Easy",
+    "followup_question": "Are there specific areas of javascript development that require more frequent learning, such as new libraries and frameworks, or is continuous learning essential across the entire field?"
+  }
+]

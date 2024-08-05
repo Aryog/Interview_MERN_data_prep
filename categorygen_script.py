@@ -33,17 +33,17 @@ def save_json(data, file_path):
 
 def generate_questions(data):
     for item in data:
-        question = item['question']
+        question = item['topic']
         contextual_prompt = f"For this question you should generate the category that is in either one word or two. Don't give other than category which is relavent to the question. Give strictly only the category. Technical Interview Question: {question}"
         next_question = run_llama3(contextual_prompt)
         
         if next_question :
-            item['category'] = next_question.capitalize()
+            item['topic'] = next_question.capitalize()
         else:
-            item['category'] = "Unknown"
+            item['topic'] = "Unknown"
         
         print(f"Classified question: {question}")
-        print(f"Difficulty: {item['category']}")
+        print(f"Difficulty: {item['topic']}")
         print("---")
         
         # Add a delay to avoid overwhelming the LLaMA model

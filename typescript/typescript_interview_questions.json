@@ -1,0 +1,90 @@
+[
+    {
+        "question": "Do you have remote work experience as a software developer?",
+        "answer": "This is a straightforward question that requires you to give a duration for which you have worked remotely. For example, if you have been working remotely as a software developer for about a year, your answer would be, 1 year. Additionally, you could also go ahead and outline the projects that you did remotely and what was the duration of each such project. Mentioning the use of technologies such as Javascript, Node, React, Python, etc. may interest the employer to ask further questions. This question will likely be followed up by more qualitative questions like:"
+    },
+    {
+        "question": "Do you have any experience working with distributed teams?",
+        "answer": "The interviewer wants to assess the ease with which you can keep in touch and seamlessly work with a remote team. Outline your experience working with remote teammates."
+    },
+    {
+        "question": "Can you maintain a task focus in a remote environment?",
+        "answer": "The interviewer wants to assess whether you can complete tasks on time without being monitored. Outline your turn-around time for different tasks."
+    },
+    {
+        "question": "What are the challenges associated with time management and work organization for a remote developer?",
+        "answer": "This question is an extension of the previous question. The interviewer wants to ensure that you are well-organized and can deliver tasks on time. You could mention the various tools such as My Calendar, Slack, Excel sheets, etc. that you utilize to stay on track. This question shows how seriously the interviewee has considered the remote working option and whether they are humble enough to acknowledge the difficulties."
+    },
+    {
+        "question": "What help can our company offer in overcoming these challenges?",
+        "answer": "The interviewer may want to know what resources you may need to perform your work efficiently. These may include access to specific software. Be sure to talk about everything that you think is necessary to work efficiently and effectively in a remote environment."
+    },
+    {
+        "question": "Can you highlight a situation where you have faced such a challenge and how you overcame it?",
+        "answer": "This is an extension of the previous question. Think of a scenario where the lack of a particular resource was a challenge. Maybe you found a free online alternative that helped you overcome the challenge. The interviewer is assessing your resourcefulness and presence of mind through this question. You could also mention community spaces such as Quora, Reddit, Stack Overflow, etc. where programmers help each other."
+    },
+    {
+        "question": "Do you have a designated work zone in your home office?",
+        "answer": "The interviewer wants to know that you are serious about your work and that you won’t be constantly disturbed. Unlike an office, a house may have several distractions. Assure the interviewer that you have a separate work area that is free of distractions."
+    },
+    {
+        "question": "Do you have a successful track record of remote work?",
+        "answer": "The remote developer jobs interview questions are designed to assess the body of work that you have successfully completed in the remote environment. Highlight any accolades you may have received or any accomplishments with your body of work. You could showcase your work portfolio, talk about any salary or payment increments or promotions you have received. Here you may also highlight the contacts and resources that you have access to because you have worked with distributed teams over a substantial period of time. Individuals who have such experience do hold an edge and may have a great opportunity as full-time remote employees for different companies.\n\nThe above question may be followed up with the following:"
+    },
+    {
+        "question": "What do you enjoy most about remote work?",
+        "answer": "Through the remote programmer jobs interview questions, the interviewer wants to know whether there are sustainable and strong reasons for you to continue working remotely or if this is just a phase for you. Make a strong case for remote working by highlighting what will make you stick with it. For example, your parents are growing old therefore, you would like to stay and take care of them. However, this prevents you from moving to different cities. Thus, working remotely gives you peace of mind as you work while you stay with them."
+    },
+    {
+        "question": "What skills have made remote-working successful for you?",
+        "answer": "Outline skills like task-focus, time-management, careful planning, and the ability to shut out distractions. Additionally, you can also talk about other skills such as initiative, self-learning ability, etc. that have helped you succeed."
+    },
+    {
+        "question": "Are there any project management or productivity tools you rely on as a remote worker?",
+        "answer": "This question specifically asks you about the tools you leverage for time and project management. While the company may require you, the developer, to use tools such as Git or Jira, you may also be using some other tools or trackers to organize your work. Mention the relevant tools that you are using - time-trackers such as Toggl, project management tools such as Asana or Trello, code-testing add-ons such as Mocha for JavaScript, etc."
+    },
+    {
+        "question": "As a remote developer, how do you split a task into easily doable pieces?",
+        "answer": "For developers, it is important to split work into doable components and use various application program interfaces (APIs) before they begin coding. For larger teams, it may make sense to divide the inputs and outputs using the black-box approach. This way the testers and other members do not get to see the code but can test the functionality of the application in question.\n\nAdditionally, for larger teams, this means that the team members are aware of the input and outputs of the components of each other’s systems without having any knowledge of the code. Remote workers may also mention models like Agile which they use to split the task into phases and keep it open to adaptations when required. You could highlight how standups at your previous remote workplace helped you take stock of what you worked on the day before, what you’re working on today, and the blockers you are facing."
+    },
+    {
+        "question": "As a remote developer, how do you give priority to your work?",
+        "answer": "The interviewer expects the remote developer to have access to and working knowledge of systems like Slack, Asana, Trello, etc. The developer must prioritize work by looking into their email and systems mentioned above to check work status, find out if there is any new and urgent work to attend to, and assess any outstanding tickets. The interviewers look for candidates who ensure thorough testing even if the work is very urgent."
+    },
+    {
+        "question": "How would you solve an in-team conflict, especially if a remote co-worker is unhappy with you?",
+        "answer": "Office politics and resentment among team members are difficult to sort as is, in remote teams more so. As a remote developer, you must talk about finding the root cause of the issue, considering the perspective of the person involved, and talking it out peacefully. If the conflict does not involve you, you must still act as a mediator to dissolve the conflict and prevent the matter from escalating. Most companies value employees who can be peacemakers."
+    },
+    {
+        "question": "Can you explain the working of X?",
+        "answer": ""
+    },
+    {
+        "question": "As a remote developer, would you be open to Zoom, Hangout, and other meetings often?",
+        "answer": "Your answer must be a YES. Companies looking for regular remote employees may want to use such meetings to ensure smooth functioning on projects. As a developer, you may be required to screen share and collaborate with other developers and employees on various projects."
+    },
+    {
+        "question": "As a remote worker, can you work without significant supervision?",
+        "answer": "Even in offline or onsite work, a developer may do a significant amount of work without direct guidance. However, remote developer jobs interview questions assess if the developer can take sufficient onus in a remote setting and be equally productive. Here you may outline any previous projects, including personal or university projects that you completed without significant supervision."
+    },
+    {
+        "question": "Do you know about open source licensing and when to use open source libraries and resources, especially as part of commercial software? Explain with an example.",
+        "answer": "One of the important questions in remote developer jobs interviews is about licensing regulations that govern the products you use regularly. For example, the Angular MIT license preface must be added to the code of a commercial product if the developer uses Angular, which comes under an MIT license. Moreover, companies must know that their developers are aware of the licenses involved in commercial software because they have a cost implication. Thus, even though open source solutions are better than proprietary ones, one must know when commercial licensing involves a higher cost for open-source software."
+    },
+    {
+        "question": "What process do you use for your programming tasks?",
+        "answer": "Another question that you can expect in a remote programmer job interview is about programming task processes. One can use different software program models such as Agile, Waterfall, Spiral, etc. Mention whatever model you prefer to structure your programming tasks. Some parts of the process include:\n\nRequirements analysis: For getting started with developing a product one needs to define the requirements. As a developer, you need to recognize the ambiguity, contradictions, and incomplete aspects of requirements.\nSpecification: You need to specifically define the software to be written with due rigor. As a developer, you may use pre-developed applications and write specifications for fine-tuning them as per need or develop specifications before application development for systems with high safety requirements.\nSoftware architecture: Software architecture is an abstract representation of how the software or system appears. Architecture must include all current requirements and have room for future development."
+    },
+    {
+        "question": "What does debugging mean in software development?",
+        "answer": "Debugging is the process of removing or correcting bugs in the software. It has multiple steps involving identifying an error, isolating it from the source, and finally removing the error or proposing a workaround. Debugging plays a vital role in the testing process, therefore making it an essential part of software development."
+    },
+    {
+        "question": "How do you ensure a safe and fast code?",
+        "answer": "The safety of the code is always the top priority. If that makes the code slow, then you need to find out what is causing the time complexity and make the changes accordingly."
+    },
+    {
+        "question": "What is a stack? Mention any two of its basic operations.",
+        "answer": "A stack is a linear data structure in which operations are carried out in a specific order, namely either LIFO(Last In First Out) or FILO(First In Last Out). As a linear data structure, the stack mainly has three operations. The ‘push’ operation allows the insertion of elements from the top. The ‘pop’ operation allows the removal of the newest element. The ‘peek’ operation allows you to see the elements of a stack without altering them."
+    }
+]
